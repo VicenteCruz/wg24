@@ -113,9 +113,7 @@
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
             .then(data => {
-                busData = data; // Store the fetched bus data
-                console.log(busData); // Inspect the API response
-
+                console.log(data); // Inspect the API response
                 // Clear previous markers
                 markers.forEach(marker => {
                     map.removeLayer(marker); // Remove marker from the map
@@ -127,7 +125,7 @@
                         if (vehicle.lat && vehicle.lon) { // Check for coordinates
                             // Create a marker for each vehicle
                             var marker = L.marker([vehicle.lat, vehicle.lon]).addTo(map); // Add marker to the initialized map
-                            markers.push({ marker: marker, line_id: vehicle.line_id }); // Store marker with associated line_id
+                            markers.push(marker); // Store the marker in the array
                             
                             // Create a popup with vehicle information
                             var popupContent = `
