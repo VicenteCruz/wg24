@@ -4,8 +4,7 @@
     <title>Geo Web 2024 Assignment</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <link   
- rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <style>
         html, body {
             height: 100%; /* Ensure the body takes full height */
@@ -34,23 +33,76 @@
             font-size: 14px; /* Font size */
             z-index: 1000; /* Ensure text is on top */
         }
+        #menuButton {
+            position: absolute; /* Position the button */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            padding: 10px 15px; /* Button padding */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            z-index: 1000; /* Ensure button is on top */
+        }
+        #sideMenu {
+            position: fixed; /* Fixed position to stay in place */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 250px; /* Set width of the sidebar */
+            height: 100%; /* Full height */
+            background-color: white; /* White background */
+            color: black; /* Black text color */
+            padding: 20px; /* Padding inside the sidebar */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            transition: transform 0.3s ease; /* Smooth transition */
+            transform: translateX(-100%); /* Initially hidden */
+            z-index: 1000; /* Ensure it is on top */
+        }
+
+        #sideMenu.show {
+            transform: translateX(0); /* Show the sidebar */
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
     <button id="refreshButton">Refresh</button>
     <div id="lastRefresh">Last Refresh: Never</div>
+    <button id="menuButton">Open Menu</button>
+    <div id="sideMenu">
+        <h3 style="color: black;">Menu</h3>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" id="toggleBusPoints" checked>
+                    Show Bus Points
+                </label>
+            </li>
+            <li>
+                <button id="filterBusesButton">Filter Buses</button>
+            </li>
+            <!-- Add more options as needed -->
+        </ul>
+    </div>
 
     <script>
-        var map = L.map('map').setView([38.736946, -9.142685], 13); // Initialize the map with a view
+        var map = L.map('map', {
+            zoomControl: false // Disable default zoom control
+        }).setView([38.736946, -9.142685], 13); // Initialize the map with a view
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map); // Add tile layer to the map
 
+        var zoomControl = L.control.zoom({
+            position: 'bottomleft' // Set position to bottom left
+        }).addTo(map);
+
         var lastRefreshTime = 'Never'; // Initialize last refresh time
         var markers = []; // Array to hold markers
+        var busData = []; // Array to hold bus data from API
 
         function updateLastRefresh() {
             lastRefreshTime = new Date().toLocaleTimeString(); // Update to current time
@@ -61,7 +113,9 @@
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
             .then(data => {
-                console.log(data); // Inspect the API response
+                busData = data; // Store the fetched bus data
+                console.log(busData); // Inspect the API response
+
                 // Clear previous markers
                 markers.forEach(marker => {
                     map.removeLayer(marker); // Remove marker from the map
@@ -73,16 +127,16 @@
                         if (vehicle.lat && vehicle.lon) { // Check for coordinates
                             // Create a marker for each vehicle
                             var marker = L.marker([vehicle.lat, vehicle.lon]).addTo(map); // Add marker to the initialized map
-                            markers.push(marker); // Store the marker in the array
+                            markers.push({ marker: marker, line_id: vehicle.line_id }); // Store marker with associated line_id
                             
                             // Create a popup with vehicle information
                             var popupContent = `
-                                <strong>Vehicle ID:</strong> ${vehicle.id || 'N/A'}<br>
-                                <strong>Line:</strong> ${vehicle.line || 'N/A'}<br>
+                                <strong>Line:</strong> ${vehicle.line_id || 'N/A'}<br>
                                 <strong>Latitude:</strong> ${vehicle.lat || 'N/A'}<br>
                                 <strong>Longitude:</strong> ${vehicle.lon || 'N/A'}<br>
-                                <strong>Status:</strong> ${vehicle.status || 'N/A'}<br>
-                                <strong>Last Update:</strong> ${vehicle.lastUpdate || 'N/A'}
+                                <strong>Speed:</strong> ${vehicle.speed || 'N/A'}<br>
+                                <strong>Status:</strong> ${vehicle.current_status || 'N/A'}<br>
+                                <strong>Stop id:</strong> ${vehicle.stop_id || 'N/A'}
                             `;
                             marker.bindPopup(popupContent); // Bind the popup to the marker
                         } else {
@@ -102,6 +156,43 @@
         setInterval(loadBusPositions, 5000); 
 
         loadBusPositions(); 
+
+        document.getElementById('menuButton').addEventListener('click', () => {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('show'); // Toggle the 'show' class
+        });
+
+        document.getElementById('map').addEventListener('click', () => {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.remove('show'); // Remove the 'show' class
+        });
+
+        document.getElementById('toggleBusPoints').addEventListener('change', (event) => {
+            if (event.target.checked) {
+                // Show bus points
+                markers.forEach(marker => {
+                    marker.addTo(map); // Add marker to the map
+                });
+            } else {
+                // Hide bus points
+                markers.forEach(marker => {
+                    map.removeLayer(marker); // Remove marker from the map
+                });
+            }
+        });
+
+        document.getElementById('filterBusesButton').addEventListener('click', () => {
+            const filterLineId = prompt("Enter line ID to filter (leave blank for all):");
+            
+            // Show or hide markers based on the filter
+            markers.forEach(({ marker, line_id }) => {
+                if (filterLineId === "" || line_id === filterLineId) {
+                    marker.addTo(map); // Show marker if it matches or if filter is empty
+                } else {
+                    map.removeLayer(marker); // Remove marker if it doesn't match
+                }
+            });
+        });
     </script>
 </body>
 </html>
