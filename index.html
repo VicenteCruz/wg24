@@ -13,6 +13,15 @@
         #map { 
             height: 100%; /* Make the map take full height */
         }
+        #styleSelector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1000;
+        }
         #refreshButton {
             position: absolute; /* Position the button */
             bottom: 20px; /* Distance from the bottom */
@@ -80,6 +89,17 @@
 </head>
 <body>
     <div id="map"></div>
+    <div id="styleSelector">
+        <label for="mapStyles">Choose Map Style:</label>
+        <select id="mapStyles">
+            <option value="streets">Streets</option>
+            <option value="dark">Dark</option>
+            <option value="terrain">Terrain</option>
+            <option value="outdoor">Outdoor</option>
+            <option value="trafic">Trafic</option>
+
+        </select>
+    </div>
     <button id="refreshButton">Refresh</button>
     <div id="lastRefresh">Last Refresh: Never</div>
     <button id="menuButton">Open Menu</button>
@@ -143,9 +163,10 @@
             zoomControl: false // Disable default zoom control
         }).setView([38.736946, -9.142685], 13); // Initialize the map with a view
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        var currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
             maxZoom: 19,
-        }).addTo(map); // Add tile layer to the map
+        }).addTo(map); // Add the default tile layer
+
 
         var zoomControl = L.control.zoom({
             position: 'bottomleft' // Set position to bottom left
@@ -283,6 +304,49 @@
                 .catch(error => console.error('API Error:', error));
         }
 
+        function changeMapStyle(style) {
+            // Remove the current layer
+            map.removeLayer(currentLayer);
+
+            // Set the new tile layer based on the selected style
+            switch (style) {
+                case 'dark':
+                    currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/vfcruz/cm34p81mt00ac01o05joohvdv/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
+                        maxZoom: 19,
+                    });
+                    break;
+                case 'terrain':
+                currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/vfcruz/cm34p32b900mx01qz7gvs5lne/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
+                        maxZoom: 20,
+                    });
+                    break;
+                case 'outdoor':
+                    currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/vfcruz/cm34oxww300aa01o0cfn83m5h/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
+                        maxZoom: 20,
+                    });
+                    break;
+                case 'trafic':
+                    currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-day-v1/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
+                    maxZoom: 20,
+                    });
+                break;
+                case 'streets':
+                    currentLayer = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmZjcnV6IiwiYSI6ImNtMzRuaDM5MjAxazIybHF0MnRkcGR5dDUifQ.ynftZ9Rp3L9yS1l2lhO5ZQ', {
+                    maxZoom: 20,
+                    });
+                break;
+                /*BACKUP
+                case 'streets':
+                default:
+                    currentLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        maxZoom: 19,
+                    });
+                    break;
+                */
+            }
+            currentLayer.addTo(map);
+        }
+
         // Call loadBusStops to fetch and display bus stops
         loadBusStops(); 
 
@@ -395,6 +459,11 @@
         document.getElementById('selectBusStopButton').addEventListener('click', () => {
             const stopId = document.getElementById('busStopIdInput').value; // Get the input value
             selectBusStopById(stopId); // Call the function to select the bus stop
+        });
+
+        // Event listener for the dropdown menu
+        document.getElementById('mapStyles').addEventListener('change', function() {
+            changeMapStyle(this.value);
         });
 
     </script>
