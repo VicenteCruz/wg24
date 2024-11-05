@@ -101,8 +101,9 @@
         }).addTo(map);
 
         var lastRefreshTime = 'Never'; // Initialize last refresh time
-        var markers = []; // Array to hold markers
+        var markers = []; // Array to hold vehicle markers
         var busData = []; // Array to hold bus data from API
+        var busStopMarkers = []; // Array to hold bus stop markers
 
         function updateLastRefresh() {
             lastRefreshTime = new Date().toLocaleTimeString(); // Update to current time
@@ -149,6 +150,38 @@
             .catch(error => console.error('API Error:', error));
         }
 
+        function loadBusStops() {
+            fetch('data.php') // Fetch bus stops from the PHP script
+                .then(response => response.json())
+                .then(data => {
+                    // Clear previous bus stop markers
+                    busStopMarkers.forEach(marker => {
+                        map.removeLayer(marker); // Remove marker from the map
+                    });
+                    busStopMarkers = []; // Clear the bus stop markers array
+
+                    if (data.features && data.features.length > 0) { // Check if data is valid
+                        data.features.forEach(stop => {
+                            var coords = stop.geometry.coordinates;
+                            var marker = L.marker([coords[1], coords[0]]).addTo(map); // Add marker to the initialized map
+                            busStopMarkers.push(marker); // Store the marker in the array
+
+                            // Create a popup with bus stop information
+                            var popupContent = `
+                                <strong>Stop Name:</strong> ${stop.properties.name || 'N/A'}
+                            `;
+                            marker.bindPopup(popupContent); // Bind the popup to the marker
+                        });
+                    } else {
+                        console.warn('No bus stops found or invalid API response.');
+                    }
+                })
+                .catch(error => console.error('API Error:', error));
+        }
+
+        // Call loadBusStops to fetch and display bus stops
+        loadBusStops(); 
+
         document.getElementById('refreshButton').addEventListener('click', loadBusPositions); // Add click event to button
 
         setInterval(loadBusPositions, 5000); 
@@ -183,8 +216,8 @@
             const filterLineId = prompt("Enter line ID to filter (leave blank for all):");
             
             // Show or hide markers based on the filter
-            markers.forEach(({ marker, line_id }) => {
-                if (filterLineId === "" || line_id === filterLineId) {
+            markers.forEach(marker => {
+                if (filterLineId === "" || marker.line_id === filterLineId) {
                     marker.addTo(map); // Show marker if it matches or if filter is empty
                 } else {
                     map.removeLayer(marker); // Remove marker if it doesn't match

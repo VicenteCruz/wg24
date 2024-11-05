@@ -1,0 +1,724 @@
+line_id,line_name,line_routes,line_pattern,color,municipality_id
+1001,Alfragide (Estr Seminario) - Reboleira (Estação),['1001_0'],"['1001_0_2', '1001_0_1']",#C61D23,['1115']
+1002,Reboleira (Estação) | Circular via Alfragide (Centro comercial ) e Amadora (Estação Sul),['1002_0'],['1002_0_3'],#C61D23,['1115']
+1003,Amadora (Estação Norte) - Amadora Este (Metro),['1003_0'],"['1003_0_2', '1003_0_1']",#C61D23,['1115']
+1004,Amadora (Estação Norte) via Moinhos da Funcheira | Circular,['1004_0'],['1004_0_3'],#C61D23,['1115']
+1005,Amadora (Estação Norte) - UBBO,"['1005_2', '1005_1', '1005_0']","['1005_2_3', '1005_1_2', '1005_0_2', '1005_0_1']",#C61D23,['1115']
+1006,Amadora (Estação Norte) - UBBO | Noturna,"['1006_1', '1006_0']","['1006_1_2', '1006_1_1', '1006_0_2', '1006_0_1']",#C61D23,['1115']
+1008,Amadora Este (Metro) | Circular,['1008_0'],['1008_0_3'],#3D85C6,['1115']
+1009,Amadora (Hospital) Via Mina e Venteira | Circular,['1009_0'],['1009_0_3'],#3D85C6,"['1115', '1111']"
+1010,Brandoa (Pólo Escola) - Casal da Mira,['1010_0'],"['1010_0_2', '1010_0_1']",#C61D23,['1115']
+1011,Brandoa (Largo) - Reboleira (Metro),"['1011_1', '1011_0']","['1011_1_3', '1011_0_2', '1011_0_1']",#C61D23,['1115']
+1012,Alfornelos Metro via Brandoa | Circular,['1012_0'],['1012_0_3'],#3D85C6,['1115']
+1013,Amadora (Cemitério) - Atalaia (Escola Secundária) via Casas do Lago,['1013_0'],"['1013_0_2', '1013_0_1']",#C61D23,['1115']
+1014,Amadora (Cemitério) - Vila Chã via Casas do Lago,['1014_0'],"['1014_0_2', '1014_0_1']",#C61D23,['1115']
+1015,Reboleira (Estação) via Damaia | Circular,['1015_0'],['1015_0_3'],#3D85C6,['1115']
+1101,Alfragide (Centro Comercial) - Algés (Estação),"['1101_1', '1101_0']","['1101_1_2', '1101_1_1', '1101_0_2', '1101_0_1']",#C61D23,['1110']
+1103,Algés (Estação) - Queijas (PSP),['1103_0'],"['1103_0_2', '1103_0_1']",#C61D23,['1110']
+1105,Algés (Estação) - Queluz Baixo (Centro Comercial),"['1105_1', '1105_0']","['1105_1_2', '1105_1_1', '1105_0_2', '1105_0_1']",#C61D23,['1110']
+1106,Queluz Baixo (Centro Comercial) - Algés (Estação),"['1106_1', '1106_0']","['1106_1_2', '1106_1_1', '1106_0_2']",#C61D23,['1110']
+1107,Algés (Estação) - Queluz Baixo via Queijas,['1107_0'],"['1107_0_2', '1107_0_1']",#C61D23,['1110']
+1109,Carnaxide via Outurela | Circular,['1109_0'],['1109_0_3'],#3D85C6,['1110']
+1110,Carnaxide via Queijas | Circular,['1110_0'],['1110_0_3'],#C61D23,['1110']
+1111,Massamá-Barcarena (Estação Sul) - Barcarena (Fábrica Pólvora),['1111_0'],"['1111_0_2', '1111_0_1']",#C61D23,['1110']
+1113,Algés (Estação) via Cruz Quebrada e Linda-a-Velha | Circular,['1113_0'],['1113_0_3'],#3D85C6,['1110']
+1114,Algés (Estação) via Linda-a-Velha e Miraflores | Circular,['1114_0'],['1114_0_3'],#3D85C6,['1110']
+1115,Caxias (Ped Italiana) - Lage (Centro),"['1115_4', '1115_3', '1115_2', '1115_1', '1115_0']","['1115_4_2', '1115_3_2', '1115_3_1', '1115_2_2', '1115_2_1', '1115_1_2', '1115_1_1', '1115_0_2', '1115_0_1']",#C61D23,['1110']
+1117,Caxias (Qta Moura) - Lage (Centro),"['1117_3', '1117_2', '1117_1', '1117_0']","['1117_3_2', '1117_3_1', '1117_2_2', '1117_2_1', '1117_1_2', '1117_1_1', '1117_0_2', '1117_0_1']",#C61D23,['1110']
+1119,Leceia (Sociedade) - Paço De Arcos (Estação Norte),"['1119_1', '1119_0']","['1119_1_2', '1119_1_1', '1119_0_2', '1119_0_1']",#C61D23,['1110']
+1120,Oeiras (Estação Norte) - Paço De Arcos (Estação Norte),['1120_0'],"['1120_0_2', '1120_0_1']",#3D85C6,['1110']
+1121,Oeiras via Piscina Oceânica | Circular,['1121_0'],['1121_0_3'],#C61D23,['1110']
+1122,Bº Joaquim Matias - Caxias (Ped Italiana),['1122_0'],"['1122_0_2', '1122_0_1']",#C61D23,['1110']
+1123,Paço De Arcos (Estação Norte) - Porto Salvo (Lagoas Park),"['1123_1', '1123_0']","['1123_1_2', '1123_0_2', '1123_0_1']",#C61D23,['1110']
+1124,Paço de Arcos | Circular,['1124_0'],['1124_0_3'],#3D85C6,['1110']
+1125,Porto Salvo via Leião e Lage | Circular,['1125_0'],['1125_0_3'],#C61D23,['1110']
+1201,Terrugem (Escola) | Circular,['1201_0'],['1201_0_3'],#3D85C6,['1111']
+1204,Alto do Forte (Centro Comercial) – Circular,"['1204_2', '1204_1', '1204_0']","['1204_2_2', '1204_2_1', '1204_1_3', '1204_0_3']",#3D85C6,['1111']
+1205,Algueirão-Mem Martins (Estação) - Mem Martins (Esc Secundária) via Hospital,['1205_0'],"['1205_0_2', '1205_0_1']",#3D85C6,['1111']
+1206,Algueirão-Mem Martins (Estação) - Portela de Sintra (Estação) via Tribunal e Hospital,"['1206_1', '1206_0']","['1206_1_2', '1206_1_1', '1206_0_2', '1206_0_1']",#C61D23,['1111']
+1208,Almargem Bispo (Cemitério) - Portela de Sintra (Estação Norte) via Hospital,['1208_0'],"['1208_0_2', '1208_0_1']",#C61D23,['1111']
+1209,Bairro da Felosa - Mira Sintra (Mercado) via Cemitério,"['1209_1', '1209_0']","['1209_1_2', '1209_1_1', '1209_0_2', '1209_0_1']",#C61D23,['1111']
+1210,Bairro Fitares - Mem Martins (Esc Secundária),['1210_0'],"['1210_0_2', '1210_0_1']",#3D85C6,['1111']
+1211,Belas (Samaritana) - Agualva-Cacém (Estação),['1211_0'],"['1211_0_2', '1211_0_1']",#C61D23,['1111']
+1212,Venda Seca - Queluz (Estação),['1212_0'],"['1212_0_2', '1212_0_1']",#C61D23,['1111']
+1213,Bº Joaquim Fontes (Centro Comercial) - Agualva-Cacém (Estação),['1213_0'],"['1213_0_2', '1213_0_1']",#C61D23,['1111']
+1215,Agualva-Cacém (Estação) via Encosta S. Marcos | Circular,['1215_0'],['1215_0_3'],#C61D23,['1111']
+1216,Tercena (Estação) via São Marcos Taguspark (Novo Banco) e Casal do Cotão | Circular,"['1216_1', '1216_0']","['1216_1_3', '1216_0_3']",#3D85C6,"['1111', '1110']"
+1217,Agualva-Cacém (Estação) - Massamá (Urbanização Norte),['1217_0'],"['1217_0_2', '1217_0_1']",#C61D23,['1111']
+1218,Agualva-Cacém (Estação) - Mira Sintra (Mercado) via Av Bomb Vol,['1218_0'],"['1218_0_2', '1218_0_1']",#C61D23,['1111']
+1219,Agualva-Cacém (Estação) - Mira Sintra (Mercado) via Av Santa Maria,['1219_0'],"['1219_0_2', '1219_0_1']",#C61D23,['1111']
+1220,Agualva-Cacém (Estação) via S. Marcos (Largo) | Circular,['1220_0'],['1220_0_3'],#C61D23,['1111']
+1221,Agualva-Cacém (Estação) via Lopas | Circular,['1221_0'],"['1221_0_2', '1221_0_1']",#3D85C6,['1111']
+1222,Agualva-Cacém (Estação) via Bairro Joaquim Fontes | Circular,['1222_0'],['1222_0_3'],#3D85C6,['1111']
+1223,Agualva-Cacém (Estação) - Portela Sintra (Estação Sul),"['1223_2', '1223_1', '1223_0']","['1223_2_2', '1223_2_1', '1223_1_2', '1223_1_1', '1223_0_2', '1223_0_1']",#C61D23,['1111']
+1224,Belas Clube Campo - Monte Abraão (Estação) via Carregueira (Estabelecimento Prisional),['1224_0'],"['1224_0_2', '1224_0_1']",#C61D23,['1111']
+1225,Agualva-Cacém (Estação) Via Enc. S. Marcos Univ Católica e Bela Vista | Circular,['1225_0'],['1225_0_3'],#C61D23,"['1111', '1110']"
+1226,Massamá (Casal Olival) - Queluz - Belas (Estação),['1226_0'],"['1226_0_2', '1226_0_1']",#3D85C6,['1111']
+1228,Massamá-Barcarena (Estação Norte) via Belas | Circular,['1228_0'],['1228_0_3'],#C61D23,['1111']
+1229,Massamá-Barcarena (Estação Norte) via Quinta das Flores | Circular,['1229_0'],['1229_0_3'],#3D85C6,['1111']
+1230,Monte Abraão (Estação) | Circular,['1230_0'],"['1230_0_2', '1230_0_1']",#3D85C6,['1111']
+1231,Mem Martins (Esc. Ferreira Castro) - Coutinho Afonso,['1231_0'],"['1231_0_2', '1231_0_1']",#C61D23,['1111']
+1232,Rio de Mouro (Estação Sul) via Mem Martins | Circular,['1232_0'],['1232_0_3'],#C61D23,['1111']
+1233,Agualva-Cacém (Estação) Via Bela Vista Univ Católica e Enc. S. Marcos| Circular,['1233_0'],['1233_0_3'],#C61D23,"['1111', '1110']"
+1234,São Pedro Sintra (Chão Meninos) - Mira Sintra (Junta Freguesia),['1234_0'],"['1234_0_2', '1234_0_1']",#C61D23,['1111']
+1235,Covas Ferro - Mercês (Estação Norte),['1235_0'],"['1235_0_2', '1235_0_1']",#C61D23,['1111']
+1236,Alto do Forte (Centro Comercial) - Queluz - Belas (Estação),['1236_0'],"['1236_0_2', '1236_0_1']",#C61D23,['1111']
+1240,Negrais (Soc Recreativa) - Portela Sintra (Estação Norte),['1240_0'],"['1240_0_2', '1240_0_1']",#C61D23,['1111']
+1241,Almoçageme (Mercado) - Hospital de Sintra,['1241_0'],"['1241_0_2', '1241_0_1']",#C61D23,['1111']
+1242,Casais Cabrela (Largo) - Almoçageme (Mercado),['1242_0'],"['1242_0_2', '1242_0_1']",#C61D23,['1111']
+1244,Casal de Cambra (Escola) - Portela de Sintra (Estação Norte) via Hospital,['1244_0'],"['1244_0_2', '1244_0_1']",#C61D23,['1111']
+1245,Catribana (Largo) - Portela Sintra (Estação Norte),['1245_0'],"['1245_0_2', '1245_0_1']",#C61D23,['1111']
+1247,Fontanelas - Portela de Sintra (Estação) via Janas,['1247_0'],"['1247_0_2', '1247_0_1']",#C61D23,['1111']
+1248,Portela Sintra (Estação Norte) - Praia Maçãs (Mercado),"['1248_1', '1248_0']","['1248_1_2', '1248_1_1', '1248_0_2', '1248_0_1']",#C61D23,['1111']
+1249,Portela Sintra (Estação Norte) - Magoito (Praia),['1249_0'],"['1249_0_2', '1249_0_1']",#C61D23,['1111']
+1250,Portela Sintra (Estação Norte) - Praia Grande,['1250_0'],"['1250_0_2', '1250_0_1']",#C61D23,['1111']
+1251,Portela Sintra (Estação Sul) - Rio De Mouro (Estação Sul),"['1251_3', '1251_2', '1251_1', '1251_0']","['1251_3_3', '1251_2_2', '1251_2_1', '1251_1_2', '1251_0_2', '1251_0_1']",#C61D23,['1111']
+1252,Portela Sintra (Estação Sul) via Ranholas | Circular,"['1252_1', '1252_0']","['1252_1_3', '1252_0_3']",#3D85C6,['1111']
+1253,Sintra (Estação) via Cabo da Roca | Circular,['1253_0'],['1253_0_3'],#C61D23,['1111']
+1254,Portela Sintra (Estação Norte) - Magoito (Praia),['1254_0'],"['1254_0_2', '1254_0_1']",#C61D23,['1111']
+1255,Rebanque - Portela Sintra (Estação Norte),['1255_0'],"['1255_0_2', '1255_0_1']",#C61D23,['1111']
+1501,Reboleira (Estação) | Circular via Alfragide (Zona Industrial e Centro comercial),['1501_0'],['1501_0_3'],#3D85C6,"['1115', '1110']"
+1502,Algés (Estação) - Amadora (Estação Sul) via Linda-a-Velha,['1502_0'],"['1502_0_2', '1502_0_1']",#C61D23,"['1110', '1115']"
+1503,Algés (Estação) - Bº Zambujal,"['1503_1', '1503_0']","['1503_1_2', '1503_1_1', '1503_0_2', '1503_0_1']",#C61D23,"['1110', '1115']"
+1504,Algés (Estação) - Bº Zambujal,['1504_0'],"['1504_0_2', '1504_0_1']",#C61D23,"['1110', '1115']"
+1506,Amadora (Hospital) via Alfragide e Damaia| Circular,['1506_0'],['1506_0_3'],#C61D23,"['1115', '1110']"
+1507,Caxias (Estação) - Reboleira (Metro),"['1507_1', '1507_0']","['1507_1_1', '1507_0_2', '1507_0_1']",#C61D23,"['1110', '1115']"
+1508,Almargem Bispo (Centro Saúde) - Amadora Este (Metro),['1508_0'],"['1508_0_2', '1508_0_1']",#C61D23,"['1111', '1115']"
+1509,Amadora (Hospital) - Casal de Cambra (C. Saúde),['1509_0'],"['1509_0_2', '1509_0_1']",#C61D23,"['1115', '1111']"
+1510,Amadora (Hospital) - Damaia De Baixo (Pavilhão Desportivo),['1510_0'],"['1510_0_2', '1510_0_1']",#3D85C6,"['1115', '1111']"
+1511,Monte Abraão (Estação) via Amadora (Hospital) | Circular,"['1511_1', '1511_0']","['1511_1_3', '1511_0_3']",#3D85C6,"['1111', '1115']"
+1512,Amadora (Hospital) - Montelavar (Largo),"['1512_1', '1512_0']","['1512_1_2', '1512_1_1', '1512_0_2', '1512_0_1']",#C61D23,"['1115', '1111']"
+1513,Amadora (Hospital) | Circular,"['1513_4', '1513_3', '1513_2', '1513_1', '1513_0']","['1513_4_3', '1513_3_3', '1513_2_3', '1513_1_2', '1513_1_1', '1513_0_3']",#3D85C6,"['1115', '1111']"
+1514,Amadora (Hospital) via Alfornelos| Circular,['1514_0'],"['1514_0_2', '1514_0_1']",#C61D23,"['1115', '1111']"
+1515,Amadora Este (Metro) - Casal Cambra via Queluz-Belas (Estação),"['1515_1', '1515_0']","['1515_1_2', '1515_1_1', '1515_0_2', '1515_0_1']",#C61D23,"['1115', '1111']"
+1516,Casal Cambra (Igreja) - Monte Abraão (Estação),['1516_0'],"['1516_0_2', '1516_0_1']",#C61D23,"['1111', '1115']"
+1517,Casal de Cambra (C Rebentão) - Reboleira (Metro),['1517_0'],"['1517_0_2', '1517_0_1']",#C61D23,"['1115', '1111']"
+1518,Monte Abraão - Reboleira (Metro),"['1518_1', '1518_0']","['1518_1_1', '1518_0_2', '1518_0_1']",#C61D23,"['1111', '1115']"
+1519,Queluz (Palácio) - Serra Silveira,['1519_0'],"['1519_0_2', '1519_0_1']",#C61D23,"['1111', '1115']"
+1520,Algés (Estação) - Agualva-Cacém (Estação),['1520_0'],"['1520_0_2', '1520_0_1']",#C61D23,"['1110', '1111']"
+1521,Algés (Estação) - Agualva-Cacém (Estação) via A5,['1521_0'],"['1521_0_2', '1521_0_1']",#C61D23,"['1110', '1111']"
+1522,Algés (Estação) - Monte Abraão (Estação),['1522_0'],"['1522_0_2', '1522_0_1']",#C61D23,"['1110', '1111']"
+1523,Agualva-Cacém (Estação) - Oeiras (Estação),['1523_0'],"['1523_0_2', '1523_0_1']",#C61D23,"['1111', '1110']"
+1524,Tercena (Estação) | Circular via Casal do Cotão – Taguspark,['1524_0'],"['1524_0_2', '1524_0_1']",#3D85C6,"['1111', '1110']"
+1525,Caxias (Est. Prisional) - Monte Abraão (Estação),"['1525_4', '1525_2', '1525_1', '1525_0']","['1525_4_2', '1525_4_1', '1525_2_1', '1525_1_2', '1525_1_1', '1525_0_2', '1525_0_1']",#C61D23,"['1110', '1111']"
+1527,Cruz Quebrada (Estação) - Queluz (Estação),"['1527_1', '1527_0']","['1527_1_2', '1527_1_1', '1527_0_2', '1527_0_1']",#C61D23,"['1110', '1111']"
+1528,Linda-a-Velha (Esc Secundária) - Queluz - Belas (Estação),['1528_0'],"['1528_0_2', '1528_0_1']",#C61D23,"['1110', '1111']"
+1529,Oeiras (Estação Norte) - Oeiras Golf Residence via Taguspark (Novo Banco),"['1529_1', '1529_0']","['1529_1_2', '1529_1_1', '1529_0_2', '1529_0_1']",#C61D23,"['1110', '1111']"
+1530,Oeiras (Estação Norte) - Queluz (4 Caminhos),['1530_0'],"['1530_0_2', '1530_0_1']",#C61D23,"['1110', '1111']"
+1531,Paço De Arcos (Estação Norte) - São Marcos (Rotunda),['1531_0'],"['1531_0_2', '1531_0_1']",#C61D23,"['1110', '1111']"
+1601,Amadora Este (Metro) – Carcavelos (Praia),"['1601_5', '1601_4', '1601_1', '1601_0']","['1601_5_2', '1601_5_1', '1601_4_2', '1601_1_2', '1601_1_1', '1601_0_2', '1601_0_1']",#C61D23,"['1115', '1111', '1110', '1105']"
+1603,Amadora (Estação Norte) - Caneças (Largo Vieira Caldas),['1603_0'],"['1603_0_2', '1603_0_1']",#C61D23,"['1115', '1111', '1116']"
+1604,Carcavelos (Estação) - Parede (Terminal),"['1604_3', '1604_2', '1604_1', '1604_0']","['1604_3_2', '1604_2_2', '1604_1_3', '1604_0_2', '1604_0_1']",#C61D23,"['1105', '1110']"
+1605,Carnaxide (Av. João Paulo II) - Carcavelos (Nova SBE) via A5,['1605_0'],"['1605_0_2', '1605_0_1']",#C61D23,"['1110', '1105']"
+1606,Carnaxide (Av. João Paulo II) - Carcavelos (Nova SBE) via Terrugem,['1606_0'],"['1606_0_2', '1606_0_1']",#C61D23,"['1110', '1105']"
+1608,Oeiras (Estação Norte) - Taguspark (Rotunda Sef),"['1608_1', '1608_0']","['1608_1_2', '1608_1_1', '1608_0_2', '1608_0_1']",#C61D23,"['1110', '1105']"
+1609,Oeiras (Estação Norte) - Talaíde (Igreja),['1609_0'],"['1609_0_2', '1609_0_1']",#C61D23,"['1110', '1105']"
+1610,Paço De Arcos (Estação Norte) - Talaíde (Campo Futebol),"['1610_1', '1610_0']","['1610_1_2', '1610_1_1', '1610_0_2', '1610_0_1']",#C61D23,"['1110', '1105']"
+1611,Paço de Arcos (Estação Norte) - Talaíde (Campo Futebol) via Vila Fria,['1611_0'],"['1611_0_2', '1611_0_1']",#C61D23,"['1110', '1105']"
+1612,Agualva-Cacém (Estação) - Carcavelos (Estação) via Taguspark (Novo Banco),"['1612_1', '1612_0']","['1612_1_2', '1612_1_1', '1612_0_2', '1612_0_1']",#C61D23,"['1111', '1110', '1105']"
+1613,Agualva-Cacém (Estação) - Oeiras (Estação Sul) via Trajouce,"['1613_1', '1613_0']","['1613_1_2', '1613_1_1', '1613_0_2', '1613_0_1']",#C61D23,"['1111', '1105', '1110']"
+1614,Carcavelos (Estação) - Portela Sintra (Estação Sul),"['1614_2', '1614_1', '1614_0']","['1614_2_2', '1614_2_1', '1614_1_2', '1614_1_1', '1614_0_2', '1614_0_1']",#C61D23,"['1105', '1110', '1111']"
+1615,Carcavelos (Estação) - Rio De Mouro (Estação Sul),"['1615_2', '1615_1', '1615_0']","['1615_2_2', '1615_2_1', '1615_1_2', '1615_1_1', '1615_0_2', '1615_0_1']",#C61D23,"['1105', '1110', '1111']"
+1616,Paço de Arcos (Estação Norte) – Taguspark (Rotunda SEF) via Bº Navegadores,"['1616_3', '1616_2', '1616_1', '1616_0']","['1616_3_1', '1616_2_2', '1616_2_1', '1616_1_2', '1616_1_1', '1616_0_2', '1616_0_1']",#C61D23,"['1110', '1105', '1111']"
+1617,Paço De Arcos (Estação Norte) - Talaíde (Igreja),"['1617_1', '1617_0']","['1617_1_2', '1617_0_2', '1617_0_1']",#C61D23,"['1110', '1111', '1105']"
+1622,Agualva-Cacém (Estação) - Carcavelos (Estação) via Trajouce,['1622_0'],"['1622_0_2', '1622_0_1']",#C61D23,"['1111', '1105']"
+1623,Cascais (Terminal) - Portela Sintra (Estação Sul),"['1623_1', '1623_0']","['1623_1_2', '1623_1_1', '1623_0_2', '1623_0_1']",#C61D23,"['1105', '1111']"
+1624,Cascais (Terminal) - Portela de Sintra (Estação Norte) via Azóia e Almoçageme,"['1624_1', '1624_0']","['1624_1_2', '1624_1_1', '1624_0_2', '1624_0_1']",#C61D23,"['1105', '1111']"
+1625,Cascais (Terminal) - Rio De Mouro (Estação Sul),"['1625_1', '1625_0']","['1625_1_2', '1625_1_1', '1625_0_2', '1625_0_1']",#C61D23,"['1105', '1111']"
+1626,CascaiShopping (Terminal) - Portela Sintra (Estação Sul),['1626_0'],"['1626_0_2', '1626_0_1']",#C61D23,"['1105', '1111']"
+1627,CascaiShopping (Terminal) - Rio De Mouro (Estação Sul),['1627_0'],"['1627_0_2', '1627_0_1']",#C61D23,"['1105', '1111']"
+1628,Estoril (Estação) - Rio De Mouro (Estação Sul) via Amoreira,['1628_0'],"['1628_0_2', '1628_0_1']",#C61D23,"['1105', '1111']"
+1629,Estoril (Estação) - Portela Sintra (Estação Sul),['1629_0'],"['1629_0_2', '1629_0_1']",#C61D23,"['1105', '1111']"
+1630,Estoril (Estação) - Portela Sintra (Estação Sul) via Monte Estoril,"['1630_4', '1630_3', '1630_2', '1630_1', '1630_0']","['1630_4_2', '1630_3_1', '1630_2_2', '1630_2_1', '1630_1_2', '1630_0_2', '1630_0_1']",#C61D23,"['1105', '1111']"
+1631,Estoril (Estação) - Rio De Mouro (Estação Sul),['1631_0'],"['1631_0_2', '1631_0_1']",#C61D23,"['1105', '1111']"
+1632,Carvalhal (Largo) - Portela Sintra (Estação Norte),"['1632_3', '1632_2', '1632_1', '1632_0']","['1632_3_2', '1632_3_1', '1632_2_2', '1632_1_1', '1632_0_2', '1632_0_1']",#C61D23,"['1109', '1111']"
+1633,Ericeira (Terminal) - Portela de Sintra (Estação Norte),"['1633_1', '1633_0']","['1633_1_2', '1633_1_1', '1633_0_2', '1633_0_1']",#C61D23,"['1109', '1111']"
+1634,Fonte Da Aranha - Montelavar (Largo),['1634_0'],"['1634_0_2', '1634_0_1']",#C61D23,"['1111', '1109']"
+1635,Almargem Bispo (Largo) - Caneças (Largo Vieira Caldas),"['1635_1', '1635_0']","['1635_1_2', '1635_1_1', '1635_0_2', '1635_0_1']",#C61D23,"['1111', '1116']"
+1636,Caneças (B Maria Teresa) - D Maria (Igreja),"['1636_1', '1636_0']","['1636_1_2', '1636_1_1', '1636_0_2', '1636_0_1']",#C61D23,"['1116', '1111']"
+1637,Casal Cambra - Vale Lobos (Largo),['1637_0'],"['1637_0_2', '1637_0_1']",#C61D23,"['1111', '1116']"
+1638,Oeiras (Estação Norte) - Parede (Terminal),"['1638_3', '1638_2', '1638_1', '1638_0']","['1638_3_2', '1638_3_1', '1638_2_2', '1638_2_1', '1638_1_2', '1638_1_1', '1638_0_2', '1638_0_1']",#C61D23,"['1110', '1105']"
+1701,Algés (Estação) - Colégio Militar (Metro),['1701_0'],"['1701_0_2', '1701_0_1']",#C61D23,"['1110', '1115', '1106']"
+1703,Amadora (Estação Norte) - Pontinha (Metro),['1703_0'],"['1703_0_2', '1703_0_1']",#C61D23,"['1115', '1106']"
+1704,Amadora (Hospital) - Marquês Pombal (Metro),"['1704_1', '1704_0']","['1704_1_2', '1704_1_1', '1704_0_2', '1704_0_1']",#C61D23,"['1115', '1106']"
+1706,Colégio Militar (Metro) - UBBO via Brandoa,"['1706_2', '1706_1', '1706_0']","['1706_2_2', '1706_2_1', '1706_1_2', '1706_1_1', '1706_0_2', '1706_0_1']",#C61D23,"['1106', '1115']"
+1707,Colégio Militar (Metro) – Casal Mira (UBBO) via Amadora Este (Metro),"['1707_1', '1707_0']","['1707_1_2', '1707_0_2', '1707_0_1']",#C61D23,"['1106', '1115']"
+1708,Casal Mira (Centro Comercial) | Circular,"['1708_2', '1708_1', '1708_0']","['1708_2_1', '1708_1_3', '1708_0_3']",#C61D23,"['1115', '1106']"
+1709,Caneças (Largo Jardim) - Colégio Militar (Metro),['1709_0'],"['1709_0_2', '1709_0_1']",#C61D23,"['1116', '1111', '1115', '1106']"
+1710,Caneças (Largo Jardim) - Pontinha (Metro),"['1710_3', '1710_2', '1710_1', '1710_0']","['1710_3_2', '1710_3_1', '1710_2_1', '1710_1_1', '1710_0_2', '1710_0_1']",#C61D23,"['1116', '1111', '1115', '1106']"
+1711,Caneças (Esc. Secundária) - Pontinha (Metro),['1711_0'],"['1711_0_2', '1711_0_1']",#C61D23,"['1116', '1111', '1115', '1106']"
+1712,Algés (Estação) - Amadora (Estação Sul),['1712_0'],"['1712_0_2', '1712_0_1']",#C61D23,"['1110', '1106', '1115']"
+1713,Algés (Estação) - Amadora Este (Metro),"['1713_1', '1713_0']","['1713_1_2', '1713_1_1', '1713_0_2', '1713_0_1']",#C61D23,"['1110', '1115']"
+1714,Amadora (Estação Sul) - Belém (Estação),['1714_0'],"['1714_0_2', '1714_0_1']",#C61D23,"['1115', '1110', '1106']"
+1715,Belém (Estação) - Mira Sintra (Mercado),['1715_0'],"['1715_0_2', '1715_0_1']",#C61D23,"['1106', '1110', '1115', '1111']"
+1716,Idanha (Urb Campinas) - Marquês Pombal (Metro),"['1716_1', '1716_0']","['1716_1_1', '1716_0_2', '1716_0_1']",#C61D23,"['1111', '1115', '1110', '1106']"
+1717,Colégio Militar (Metro) - Tercena via Amadora Este (Metro),"['1717_2', '1717_0']","['1717_2_2', '1717_0_2', '1717_0_1']",#C61D23,"['1106', '1115', '1111', '1110']"
+1718,Grajal - Belém (Estação),['1718_0'],"['1718_0_2', '1718_0_1']",#C61D23,"['1111', '1115', '1106']"
+1719,Casal de Cambra - Colégio Militar (Metro),['1719_0'],"['1719_0_2', '1719_0_1']",#C61D23,"['1111', '1115', '1106']"
+1720,Casal de Cambra - Colégio Militar (Metro) via Queluz-Belas (Estação),"['1720_1', '1720_0']","['1720_1_2', '1720_1_1', '1720_0_2', '1720_0_1']",#C61D23,"['1111', '1115', '1106']"
+1721,Colégio Militar (Metro) - Massamá (Casal do Olival) via Amadora Este (Metro),"['1721_2', '1721_1', '1721_0']","['1721_2_2', '1721_2_1', '1721_1_2', '1721_0_2', '1721_0_1']",#C61D23,"['1106', '1115', '1111']"
+1722,Alfragide (Centro Comercial) - Hospital São Francisco Xavier,['1722_0'],"['1722_0_2', '1722_0_1']",#C61D23,"['1110', '1106']"
+1723,Carnaxide (Av Portugal) - Marquês Pombal (Metro),['1723_0'],"['1723_0_2', '1723_0_1']",#C61D23,"['1110', '1106']"
+1724,Linda-a-Velha – Marquês Pombal (Metro) via Alto Sta Catarina,"['1724_3', '1724_2', '1724_1', '1724_0']","['1724_3_2', '1724_3_1', '1724_2_3', '1724_1_2', '1724_1_1', '1724_0_2', '1724_0_1']",#C61D23,"['1110', '1106']"
+1725,Marquês Pombal (Metro) - Oeiras (Estação Norte),['1725_0'],"['1725_0_2', '1725_0_1']",#C61D23,"['1106', '1110']"
+1726,Marquês Pombal (Metro) - Queijas (PSP),"['1726_2', '1726_1', '1726_0']","['1726_2_1', '1726_1_2', '1726_1_1', '1726_0_2', '1726_0_1']",#C61D23,"['1106', '1110', '1115']"
+1728,Marquês Pombal (Metro) - Queijas (PSP) via Alto Sta Catarina,"['1728_1', '1728_0']","['1728_1_2', '1728_1_1', '1728_0_2', '1728_0_1']",#C61D23,"['1106', '1110', '1115']"
+1729,Marquês Pombal (Metro) - Queluz Baixo (Centro Comercial),"['1729_1', '1729_0']","['1729_1_2', '1729_1_1', '1729_0_2', '1729_0_1']",#C61D23,"['1106', '1110']"
+1730,Marquês Pombal (Metro) - Queluz Baixo (Centro Comercial) via Linda-a-Velha,"['1730_3', '1730_2', '1730_1', '1730_0']","['1730_3_2', '1730_2_2', '1730_1_1', '1730_0_2', '1730_0_1']",#C61D23,"['1106', '1110', '1115']"
+1731,Agualva-Cacém (Estação) - Hospital São Francisco Xavier,['1731_0'],"['1731_0_2', '1731_0_1']",#C61D23,"['1111', '1110', '1106']"
+1733,Marquês Pombal (Metro) - São Marcos via Queijas (Rotunda) e Taguspark,"['1733_2', '1733_1', '1733_0']","['1733_2_2', '1733_1_2', '1733_1_1', '1733_0_2', '1733_0_1']",#C61D23,"['1106', '1110', '1111']"
+1998,Cascais - Oeiras,"['1998_1', '1998_0']","['1998_1_2', '1998_1_1', '1998_0_2', '1998_0_1']",#2A9057,"['1110', '1105']"
+2002,A-dos-Cãos - Loures (Centro Saúde),['2002_0'],"['2002_0_2', '2002_0_1']",#C61D23,['1107']
+2003,Guerreiros - Guerreiros,"['2003_1', '2003_0']","['2003_1_3', '2003_0_3']",#C61D23,['1107']
+2004,Bairro de Santa Maria - Loures (Centro Saúde),['2004_0'],"['2004_0_2', '2004_0_1']",#3D85C6,['1107']
+2006,Bemposta - Bucelas | Circular via Vila Nova,['2006_0'],['2006_0_3'],#3D85C6,['1107']
+2008,Bucelas - Mato da Cruz | Circular,['2008_0'],['2008_0_3'],#3D85C6,['1107']
+2011,Cabeço de Montachique - Loures (Centro Saúde) via Murteira,"['2011_1', '2011_0']","['2011_1_2', '2011_1_1', '2011_0_2', '2011_0_1']",#C61D23,"['1107', '1109']"
+2013,Conventinho - Torres da Bela Vista,['2013_0'],"['2013_0_2', '2013_0_1']",#C61D23,['1107']
+2014,Escola Maria Veleda - Frielas,['2014_0'],"['2014_0_2', '2014_0_1']",#C61D23,['1107']
+2015,Flamenga - Torres da Bela Vista,['2015_0'],['2015_0_1'],#C61D23,['1107']
+2016,Guerreiros - Hospital Beatriz Ângelo,"['2016_1', '2016_0']","['2016_1_2', '2016_1_1', '2016_0_2', '2016_0_1']",#3D85C6,['1107']
+2017,Guerreiros - Loures Loures (Centro Saúde),['2017_0'],"['2017_0_2', '2017_0_1']",#C61D23,['1107']
+2020,Sto. Ant. Cavaleiros | Circular via Hospital Beatriz Ângelo,"['2020_1', '2020_0']","['2020_1_2', '2020_1_1', '2020_0_3']",#3D85C6,['1107']
+2021,Santo Antão do Tojal - Loures | Circular Sete Casas,['2021_0'],['2021_0_3'],#C61D23,['1107']
+2026,Loures | Circular 1,['2026_0'],"['2026_0_2', '2026_0_1']",#3D85C6,['1107']
+2027,Loures | Circular via Cidade Nova,"['2027_1', '2027_0']","['2027_1_1', '2027_0_3']",#C61D23,['1107']
+2028,Loures | Circular via Ponte Frielas,['2028_0'],['2028_0_3'],#C61D23,['1107']
+2029,Moscavide (Urb. Jardins Cristo Rei) - Moscavide (Ur. Jardins Cristo Rei) via Portela,['2029_0'],['2029_0_3'],#3D85C6,"['1107', '1106']"
+2030,Sacavém (C.Saúde) - Sacavém (Centro Saúde) via Fetais,['2030_0'],['2030_0_3'],#3D85C6,['1107']
+2031,Sacavém (C.Saúde) - Sacavém (Centro Saúde),['2031_0'],['2031_0_3'],#3D85C6,['1107']
+2032,Sacavém (Est) - Sacavém (Est),['2032_0'],['2032_0_3'],#C61D23,['1107']
+2034,S.Iria (Apeadeiro) - Sta Iria Azoia (Est) circular,['2034_0'],['2034_0_3'],#3D85C6,['1107']
+2035,Tojal Jardim - Sto Antao Tojal via MARL,['2035_0'],['2035_0_3'],#C61D23,['1107']
+2036,Sacavém(Av. Com_Sacavém(Av. Com,['2036_0'],['2036_0_3'],#3D85C6,['1107']
+2037,Zambujal - Loures | Circular Via infantado,['2037_0'],['2037_0_3'],#C61D23,['1107']
+2038,Bucelas - Loures | Circular via Ribas,['2038_0'],['2038_0_3'],#C61D23,['1107']
+2039,Bucelas - Zambujal via Sete Casas e loures,['2039_0'],"['2039_0_2', '2039_0_1']",#C61D23,['1107']
+2101,Achada - Lagoa (Colégio Miramar),['2101_0'],"['2101_0_2', '2101_0_1']",#C61D23,['1109']
+2102,Salgados - Lagoa (Colégio Miramar),['2102_0'],"['2102_0_2', '2102_0_1']",#C61D23,['1109']
+2103,Antas - Mafra (Parque Desportivo),"['2103_1', '2103_0']","['2103_1_2', '2103_0_2', '2103_0_1']",#C61D23,['1109']
+2104,Avessada - Malveira (Terminal),['2104_0'],"['2104_0_2', '2104_0_1']",#C61D23,['1109']
+2105,Barreiralva - Mafra (Parque Desportivo),['2105_0'],"['2105_0_2', '2105_0_1']",#C61D23,['1109']
+2106,Bocal - Mafra (Parque Desportivo),"['2106_2', '2106_1', '2106_0']","['2106_2_2', '2106_2_1', '2106_1_2', '2106_0_2', '2106_0_1']",#C61D23,['1109']
+2107,Bocal - Malveira (Terminal) via Avessada e Portela,"['2107_1', '2107_0']","['2107_1_1', '2107_0_2', '2107_0_1']",#C61D23,['1109']
+2108,Cachoeira - Malveira,['2108_0'],"['2108_0_2', '2108_0_1']",#C61D23,['1109']
+2109,Cachoeira - Venda do Pinheiro (Terminal),['2109_0'],"['2109_0_2', '2109_0_1']",#C61D23,['1109']
+2110,Carvalhal - Mafra (Parque Desportivo) via Mata Grande e Valverde,"['2110_2', '2110_1', '2110_0']","['2110_2_2', '2110_2_1', '2110_1_1', '2110_0_2', '2110_0_1']",#C61D23,['1109']
+2111,Casais da Areia - Lagoa (Colégio Miramar),['2111_0'],"['2111_0_2', '2111_0_1']",#C61D23,['1109']
+2112,Casais de São Lourenço - Ericeira (Terminal),['2112_0'],['2112_0_1'],#C61D23,['1109']
+2113,Ericeira (Terminal) - Casais de São Lourenço via Feiteira,"['2113_1', '2113_0']","['2113_1_1', '2113_0_2']",#C61D23,['1109']
+2114,Charneca - Lagoa (Colégio Miramar),['2114_0'],"['2114_0_2', '2114_0_1']",#C61D23,['1109']
+2115,Codeçal (Tapada Nacional) - Lagoa (Colégio Miramar),['2115_0'],"['2115_0_2', '2115_0_1']",#C61D23,['1109']
+2116,Encarnação - Mafra (Parque Desportivo),['2116_0'],"['2116_0_2', '2116_0_1']",#C61D23,['1109']
+2117,Encarnação (Cemitério) - Ericeira (Terminal) via Ribamar,"['2117_2', '2117_1', '2117_0']","['2117_2_2', '2117_1_2', '2117_1_1', '2117_0_2', '2117_0_1']",#C61D23,['1109']
+2118,Encarnação (Cemitério) - Ericeira (Terminal) via Santo Isidoro e Monte Godel,"['2118_5', '2118_4', '2118_3', '2118_2', '2118_1', '2118_0']","['2118_5_2', '2118_4_2', '2118_3_2', '2118_2_1', '2118_1_1', '2118_0_2', '2118_0_1']",#C61D23,['1109']
+2119,Encarnação (Cemitério) - Lagoa (Colégio Miramar),"['2119_1', '2119_0']","['2119_1_2', '2119_1_1', '2119_0_2', '2119_0_1']",#C61D23,['1109']
+2120,Enxara do Bispo - Ericeira (Terminal),['2120_0'],"['2120_0_2', '2120_0_1']",#C61D23,['1109']
+2121,Enxara do Bispo - Gradil,['2121_0'],"['2121_0_2', '2121_0_1']",#C61D23,['1109']
+2122,Livramento - Enxara do Bispo,['2122_0'],['2122_0_2'],#C61D23,['1109']
+2123,Praia da Foz do Lizandro - Praia de Ribeira d'Ilhas,"['2123_2', '2123_1', '2123_0']","['2123_2_2', '2123_1_2', '2123_0_2', '2123_0_1']",#C61D23,['1109']
+2124,Urbana da Ericeira 1 | Circular via Colinas Atlantico,['2124_0'],['2124_0_3'],#3D85C6,['1109']
+2125,Urbana da Ericeira 2 | Circular via Outeirinho e Fonte Boa da Brincosa,"['2125_2', '2125_1', '2125_0']","['2125_2_3', '2125_1_3', '2125_0_3']",#3D85C6,['1109']
+2126,Ericeira | Circular,['2126_0'],['2126_0_3'],#3D85C6,['1109']
+2127,Ericeira (Terminal) - Barril,['2127_0'],['2127_0_1'],#C61D23,['1109']
+2128,Ericeira (Terminal) - Fonte Boa da Brincosa,['2128_0'],"['2128_0_2', '2128_0_1']",#C61D23,['1109']
+2129,Lagoa (Colégio Miramar) - Ericeira (Terminal),['2129_0'],['2129_0_2'],#C61D23,['1109']
+2130,Ericeira (Terminal) - Lagoa (Colégio Miramar) via Ribamar,"['2130_1', '2130_0']","['2130_1_2', '2130_0_1']",#C61D23,['1109']
+2131,Lagoa (Colégio Miramar) - Ericeira (Terminal) via Santo Isidoro,"['2131_1', '2131_0']","['2131_1_2', '2131_0_2']",#C61D23,['1109']
+2132,Ericeira (Terminal) - Mafra (Terminal),"['2132_1', '2132_0']","['2132_1_2', '2132_1_1', '2132_0_1']",#C61D23,['1109']
+2133,Ericeira (Terminal) - Mafra (Palácio) via Carvoeira Montesouros e Av. Portugal,"['2133_4', '2133_3', '2133_2', '2133_1', '2133_0']","['2133_4_2', '2133_3_2', '2133_2_2', '2133_1_1', '2133_0_2', '2133_0_1']",#C61D23,['1109']
+2134,Ervideira - Gradil,['2134_0'],"['2134_0_2', '2134_0_1']",#C61D23,['1109']
+2135,Igreja Nova - Venda do Pinheiro (Núcleo Empresarial sul),['2135_0'],"['2135_0_2', '2135_0_1']",#C61D23,['1109']
+2136,Jerumelo - Mafra (Terminal),['2136_0'],"['2136_0_2', '2136_0_1']",#C61D23,['1109']
+2137,Lagoa (Colégio Miramar) - Mafra (Palácio),"['2137_1', '2137_0']","['2137_1_2', '2137_0_1']",#C61D23,['1109']
+2138,Lagoa (Colégio Miramar) - São Domingos,['2138_0'],"['2138_0_2', '2138_0_1']",#C61D23,['1109']
+2139,Lagoa (Colégio Miramar) - Sobral da Abelheira,['2139_0'],"['2139_0_2', '2139_0_1']",#C61D23,['1109']
+2140,Lagoa (Colégio Miramar) - Sobreiro,['2140_0'],"['2140_0_2', '2140_0_1']",#C61D23,['1109']
+2141,Mafra (Terminal) - Ribamar,['2141_0'],"['2141_0_2', '2141_0_1']",#C61D23,['1109']
+2142,Mafra (Almada) | Circular,"['2142_2', '2142_1', '2142_0']","['2142_2_2', '2142_1_2', '2142_1_1', '2142_0_3']",#3D85C6,['1109']
+2143,Mafra (Palácio) - Zambujal,['2143_0'],"['2143_0_2', '2143_0_1']",#C61D23,['1109']
+2144,Mafra (Parque Desportivo) - Livramento,"['2144_3', '2144_2', '2144_1', '2144_0']","['2144_3_2', '2144_2_2', '2144_1_1', '2144_0_1']",#C61D23,['1109']
+2145,Mafra | Circular via Sobral da Abelheira,"['2145_1', '2145_0']","['2145_1_3', '2145_0_3']",#C61D23,['1109']
+2146,Malveira (Centro Saúde) - Milharado (CASO) | Circular,['2146_0'],['2146_0_3'],#C61D23,['1109']
+2147,Milharado - Venda do Pinheiro (Terminal),"['2147_1', '2147_0']","['2147_1_2', '2147_0_1']",#C61D23,['1109']
+2148,Póvoa da Galega - Venda do Pinheiro (Terminal),"['2148_1', '2148_0']","['2148_1_2', '2148_0_1']",#C61D23,['1109']
+2149,Prezinheira - Venda do Pinheiro (Terminal),['2149_0'],['2149_0_1'],#C61D23,['1109']
+2150,Carvalhal - Venda do Pinheiro (Colégio Santo André),"['2150_1', '2150_0']","['2150_1_2', '2150_0_2', '2150_0_1']",#C61D23,['1109']
+2151,Venda do Pinheiro (Terminal) - Vila de Canas,['2151_0'],"['2151_0_2', '2151_0_1']",#C61D23,['1109']
+2152,ANTAS_Malveira(Esc),['2152_0'],"['2152_0_2', '2152_0_1']",#C61D23,['1109']
+2201,Arroja - Odivelas (Metro),['2201_0'],"['2201_0_2', '2201_0_1']",#C61D23,['1116']
+2202,Arroja - Sr. Roubado (Metro),['2202_0'],"['2202_0_2', '2202_0_1']",#C61D23,['1116']
+2203,Arroja | Circular via Odivelas (Metro),"['2203_1', '2203_0']","['2203_1_1', '2203_0_3']",#C61D23,['1116']
+2204,Caneças (Esc Secundária)- Famões,['2204_0'],"['2204_0_2', '2204_0_1']",#3D85C6,['1116']
+2205,Caneças (Esc. Secundária) - Odivelas (Metro),['2205_0'],"['2205_0_2', '2205_0_1']",#C61D23,['1116']
+2206,Caneças (Esc. Secundária) - Sr. Roubado (Metro),['2206_0'],"['2206_0_2', '2206_0_1']",#C61D23,['1116']
+2207,Caneças (Esc. Secundária) - Sr. Roubado (Metro) via Odivelas (Centro),['2207_0'],"['2207_0_2', '2207_0_1']",#C61D23,['1116']
+2208,Caneças (Jardim) - Vale Nogueira,['2208_0'],"['2208_0_2', '2208_0_1']",#C61D23,['1116']
+2209,Casal Bispo - Sr. Roubado (Metro),['2209_0'],"['2209_0_2', '2209_0_1']",#C61D23,['1116']
+2210,J. Amoreira-Colinas cruzeiro | circulacao,['2210_0'],['2210_0_3'],#C61D23,['1116']
+2211,Jardim da Amoreira - Odivelas (Metro),['2211_0'],"['2211_0_2', '2211_0_1']",#C61D23,['1116']
+2212,Odivelas (C. Comercial) | Circular,['2212_0'],['2212_0_3'],#3D85C6,['1116']
+2213,Odivelas (Metro) - Famões | Circular,"['2213_2', '2213_1', '2213_0']","['2213_2_2', '2213_1_1', '2213_0_3']",#C61D23,['1116']
+2215,Odivelas (Metro) - Ramada (Bons Dias),['2215_0'],"['2215_0_2', '2215_0_1']",#C61D23,['1116']
+2216,Odivelas (Metro) - Ramada (Jardim da Radial),['2216_0'],"['2216_0_2', '2216_0_1']",#C61D23,['1116']
+2217,Odivelas (Metro) | Circular via Casal Chapim,"['2217_2', '2217_1', '2217_0']","['2217_2_1', '2217_1_1', '2217_0_3']",#C61D23,['1116']
+2218,Odivelas (Metro) | Circular via Colinas do Cruzeiro,['2218_0'],['2218_0_3'],#C61D23,['1116']
+2219,Odivelas (Metro) | Circular via Póvoa de Santo Adrião,"['2219_1', '2219_0']","['2219_1_1', '2219_0_3']",#C61D23,['1116']
+2220,Olival Basto | Circular via Póvoa de Santo Adrião e Odivelas (Metro),"['2220_3', '2220_2', '2220_0']","['2220_3_1', '2220_2_3', '2220_0_3']",#3D85C6,['1116']
+2221,Póvoa de Santo Adrião (Parque Urbano) - Sr. Roubado (Metro),"['2221_1', '2221_0']","['2221_1_2', '2221_1_1', '2221_0_1']",#C61D23,['1116']
+2222,Ramada | Circular,['2222_0'],['2222_0_3'],#3D85C6,['1116']
+2223,Sr. Roubado (Metro) | Circular via Casal Novo,"['2223_1', '2223_0']","['2223_1_2', '2223_1_1', '2223_0_3']",#C61D23,['1116']
+2224,Arroja | Circular via Patameiras (C. Comercial),['2224_0'],['2224_0_3'],#C61D23,['1116']
+2225,Odivelas (Metro) | Circular via Arroja,"['2225_3', '2225_2', '2225_1', '2225_0']","['2225_3_1', '2225_2_1', '2225_1_1', '2225_0_3']",#C61D23,['1116']
+2303,Alverca (Est) - Arcena,['2303_0'],"['2303_0_2', '2303_0_1']",#C61D23,['1114']
+2304,Alverca(Est)_ALHANDRA via Calhandriz,['2304_0'],"['2304_0_2', '2304_0_1']",#C61D23,['1114']
+2306,Alverca (Est) - Vila Franca Xira via Alhandra,['2306_0'],"['2306_0_2', '2306_0_1']",#C61D23,['1114']
+2307,Arcena - Vila Franca Xira,['2307_0'],"['2307_0_2', '2307_0_1']",#C61D23,['1114']
+2309,Bogalhão - Vila Franca Xira,['2309_0'],"['2309_0_2', '2309_0_1']",#C61D23,['1114']
+2310,Torre Cima e Capelas - Carregado (Estação),['2310_0'],"['2310_0_2', '2310_0_1']",#C61D23,['1114']
+2315,Castanheira(CP)_Castanheira(CP) circular via Hospital,['2315_0'],['2315_0_3'],#C61D23,['1114']
+2316,Cotovios - Vila Franca Xira,['2316_0'],"['2316_0_2', '2316_0_1']",#C61D23,['1114']
+2317,Fonte Santa - Póvoa Santa Iria (Estação),['2317_0'],"['2317_0_2', '2317_0_1']",#C61D23,['1114']
+2318,P.S.I.(Est) - P. Sta Iria (Est) via F. Casa,['2318_0'],['2318_0_3'],#3D85C6,['1114']
+2319,F. Casa(Lgo) - Forte Casa (Largo) circular,['2319_0'],['2319_0_3'],#3D85C6,['1114']
+2325,P.S.I.(Est) - Verdelha Ruivo,['2325_0'],"['2325_0_2', '2325_0_1']",#C61D23,['1114']
+2327,P.S.I.(Est) - P. S. Iria (Est) via Vialonga,['2327_0'],['2327_0_3'],#C61D23,['1114']
+2328,QªPied - Vila Franca Xira,['2328_0'],"['2328_0_2', '2328_0_1']",#C61D23,['1114']
+2329,Alhandra(Esc) - Sobralinho,['2329_0'],"['2329_0_2', '2329_0_1']",#C61D23,['1114']
+2331,Torre Cima i Capela - Hospital VFX,['2331_0'],"['2331_0_2', '2331_0_1']",#3D85C6,['1114']
+2333,V.Franca Xira - Hospital VFX via N1,['2333_0'],"['2333_0_2', '2333_0_1']",#3D85C6,['1114']
+2335,P.S.Iria (Praça República) - Póvoa Sta Iria via Bragadas,['2335_0'],['2335_0_3'],#3D85C6,['1114']
+2336,P.S.Iria(Rep)_P.S.Iria(Rep),['2336_0'],['2336_0_3'],#3D85C6,['1114']
+2337,V.Franca Xira -V.Franca Xira,['2337_0'],['2337_0_3'],#3D85C6,['1114']
+2501,Bocal - Malveira (Terminal),['2501_0'],"['2501_0_2', '2501_0_1']",#C61D23,"['1109', '1107']"
+2502,Bucelas - Malveira,['2502_0'],"['2502_0_2', '2502_0_1']",#C61D23,"['1107', '1109']"
+2504,Carrascal - Ponte de Lousa,['2504_0'],"['2504_0_2', '2504_0_1']",#C61D23,"['1107', '1109']"
+2505,Loures (C. Comercial) - Malveira (Terminal),['2505_0'],"['2505_0_2', '2505_0_1']",#C61D23,"['1107', '1109']"
+2506,Milharado (CASO) - Ponte de Lousa,['2506_0'],"['2506_0_2', '2506_0_1']",#C61D23,"['1109', '1107']"
+2511,Bairro dos CTT - Loures (C. Comercial C. Loures),['2511_0'],"['2511_0_2', '2511_0_1']",#C61D23,"['1116', '1107']"
+2513,Caneças (Esc. Secundária) - Loures (super),"['2513_2', '2513_1', '2513_0']","['2513_2_2', '2513_1_2', '2513_1_1', '2513_0_2', '2513_0_1']",#C61D23,"['1116', '1107']"
+2515,Casal Paradela - Odivelas (Metro),"['2515_1', '2515_0']","['2515_1_2', '2515_0_2', '2515_0_1']",#C61D23,"['1107', '1116']"
+2516,Casal Paradela - Sr. Roubado (Metro),['2516_0'],"['2516_0_2', '2516_0_1']",#C61D23,"['1107', '1116']"
+2517,Odivelas (Metro) - Hospital Beatriz Ângelo | Circular,"['2517_1', '2517_0']","['2517_1_1', '2517_0_3']",#C61D23,"['1116', '1107']"
+2518,Frielas (Zona Comercial) - Sr. Roubado (Metro),['2518_0'],"['2518_0_2', '2518_0_1']",#C61D23,"['1107', '1116']"
+2519,Loures (C. Comercial C. Loures) - Odivelas (Colinas do Cruzeiro),['2519_0'],"['2519_0_2', '2519_0_1']",#C61D23,"['1107', '1116']"
+2521,Loures (C.C. Continente) - Odivelas (Metro),['2521_0'],['2521_0_1'],#C61D23,"['1107', '1116']"
+2522,Montemor - Sr. Roubado (Metro),['2522_0'],"['2522_0_2', '2522_0_1']",#C61D23,"['1107', '1116']"
+2523,Odivelas (Metro) - Montemor,"['2523_1', '2523_0']","['2523_1_1', '2523_0_2', '2523_0_1']",#C61D23,"['1116', '1107']"
+2524,Odivelas (Metro) | Circular via Hospital Beatriz Ângelo,"['2524_1', '2524_0']","['2524_1_1', '2524_0_3']",#C61D23,"['1116', '1107']"
+2525,Santo Antão do Tojal - Sr. Roubado (Metro,['2525_0'],"['2525_0_2', '2525_0_1']",#C61D23,"['1107', '1116']"
+2530,Alverca (Estação) - Bucelas via Malvarosa,['2530_0'],"['2530_0_2', '2530_0_1']",#C61D23,"['1114', '1107']"
+2532,Alverca(Est) - Loures,['2532_0'],"['2532_0_2', '2532_0_1']",#C61D23,"['1114', '1107']"
+2533,Alverca(Est) - Sto Antao Tojal via C. Areias,['2533_0'],"['2533_0_2', '2533_0_1']",#C61D23,"['1114', '1107']"
+2534,Loures(Super.) - Santa Iria Azoia,['2534_0'],"['2534_0_2', '2534_0_1']",#C61D23,"['1107', '1114']"
+2535,Loures - Vila Franca de Xira,['2535_0'],"['2535_0_2', '2535_0_1']",#C61D23,"['1107', '1114']"
+2536,Mojões - Bairro Monjoes via Póvoa,['2536_0'],['2536_0_3'],#C61D23,"['1107', '1114']"
+2537,P.S.I.(Est) - Santo Antão Tojal,['2537_0'],"['2537_0_2', '2537_0_1']",#C61D23,"['1114', '1107']"
+2538,P.S.I.(Est) - Santo Antao Tojal via Alpriate,['2538_0'],"['2538_0_2', '2538_0_1']",#C61D23,"['1114', '1107']"
+2539,S.Iria(Apeadeiro) - S.Iria(Apeadeiro),['2539_0'],['2539_0_3'],#C61D23,"['1107', '1114']"
+2540,S.IRIA(Apead)_MARL,['2540_0'],"['2540_0_2', '2540_0_1']",#C61D23,"['1107', '1114']"
+2601,Loures (C. Comercial C. Loures) - Reboleira (Metro),"['2601_1', '2601_0']","['2601_1_2', '2601_1_1', '2601_0_2', '2601_0_1']",#C61D23,"['1107', '1116', '1115', '1106']"
+2605,Cacém (Estação) - Loures (Super),"['2605_3', '2605_2', '2605_1', '2605_0']","['2605_3_2', '2605_3_1', '2605_2_2', '2605_2_1', '2605_1_1', '2605_0_2', '2605_0_1']",#C61D23,"['1111', '1115', '1116', '1107']"
+2610,Odivelas (Metro) - UBBO,['2610_0'],"['2610_0_2', '2610_0_1']",#C61D23,"['1116', '1115']"
+2611,Ramada (Bons Dias) - UBBO,['2611_0'],"['2611_0_2', '2611_0_1']",#C61D23,"['1116', '1115']"
+2620,Covas de Ferro - Loures (Centro Saúde),['2620_0'],"['2620_0_2', '2620_0_1']",#C61D23,"['1111', '1107']"
+2621,Covas de Ferro - Pinheiro de Loures,"['2621_1', '2621_0']","['2621_1_2', '2621_0_2', '2621_0_1']",#C61D23,"['1111', '1107']"
+2625,Mafra (Terminal)- São João das Lampas,['2625_0'],"['2625_0_2', '2625_0_1']",#C61D23,"['1109', '1111']"
+2626,Mafra (Parque Desportivo) - Portela de Sintra (Estação),"['2626_2', '2626_1', '2626_0']","['2626_2_2', '2626_2_1', '2626_1_1', '2626_0_2', '2626_0_1']",#C61D23,"['1109', '1111']"
+2627,Mafra (Parque Desportivo) - Ribeira dos Tostões,"['2627_1', '2627_0']","['2627_1_2', '2627_0_2', '2627_0_1']",#C61D23,"['1109', '1111']"
+2630,Caneças (Esc. Secundária) | Circular,"['2630_1', '2630_0']","['2630_1_1', '2630_0_3']",#3D85C6,['1116']
+2632,Casal de Cambra (C. Saúde) - Odivelas (Metro) via Bairro Sol Nascente,"['2632_1', '2632_0']","['2632_1_2', '2632_1_1', '2632_0_2', '2632_0_1']",#C61D23,"['1111', '1116']"
+2650,Cidade Nova - Costa da Caparica,['2650_0'],"['2650_0_2', '2650_0_1']",#0C807E,"['1107', '1116', '1503']"
+2651,Bucelas - Costa da Caparica (Terminal),['2651_0'],"['2651_0_2', '2651_0_1']",#0C807E,"['1107', '1114', '1503']"
+2652,Costa da Caparica - Forte Casa (Largo),['2652_0'],"['2652_0_2', '2652_0_1']",#0C807E,"['1503', '1106', '1107', '1114']"
+2701,Pontinha (Metro) - Vale Grande,['2701_0'],"['2701_0_2', '2701_0_1']",#C61D23,"['1106', '1116', '1115']"
+2702,Lisboa (C. Grande) - Pontinha (Metro),['2702_0'],"['2702_0_2', '2702_0_1']",#C61D23,"['1106', '1116', '1111', '1115']"
+2703,Campo Grande - Campo Grande via B. S.José,"['2703_1', '2703_0']","['2703_1_2', '2703_1_1', '2703_0_3']",#C61D23,"['1106', '1107']"
+2706,Bucelas - Lisboa (C. Grande) via Infantado,"['2706_1', '2706_0']","['2706_1_2', '2706_1_1', '2706_0_2', '2706_0_1']",#C61D23,"['1107', '1106']"
+2708,C.Aguieira - Estação Oriente,['2708_0'],"['2708_0_2', '2708_0_1']",#C61D23,"['1107', '1106']"
+2709,Bairro Angola - Bairro Angola via Camarate,['2709_0'],['2709_0_3'],#C61D23,"['1107', '1106']"
+2710,A. Moinho - Campo Grande,['2710_0'],"['2710_0_2', '2710_0_1']",#C61D23,"['1107', '1106']"
+2711,Charneca - Est Oriente via B. Santiago,['2711_0'],"['2711_0_2', '2711_0_1']",#C61D23,"['1106', '1107']"
+2713,Campo Grande - Campo Grande via Charneca,"['2713_4', '2713_2', '2713_1', '2713_0']","['2713_4_1', '2713_2_1', '2713_1_1', '2713_0_3']",#C61D23,"['1106', '1107']"
+2714,Campo Grande - Sacavém (Estação),['2714_0'],"['2714_0_2', '2714_0_1']",#C61D23,"['1106', '1107']"
+2715,Lisboa (C. Grande) - Cidade Nova via IC22,['2715_0'],['2715_0_2'],#C61D23,"['1106', '1107']"
+2716,Cidade Nova - Lisboa (C. Grande) via IC22,['2716_0'],['2716_0_1'],#C61D23,"['1107', '1106']"
+2717,Lisboa (C. Grande) - Torres da Bela Vista via IC22,['2717_0'],"['2717_0_2', '2717_0_1']",#C61D23,"['1106', '1107']"
+2718,Infantado - Lisboa (C. Grande),['2718_0'],"['2718_0_2', '2718_0_1']",#C61D23,"['1107', '1106']"
+2719,Lisboa (C.Grande) - Fanhões v/ Sete Casas e A8 Frielas,['2719_0'],"['2719_0_2', '2719_0_1']",#C61D23,"['1106', '1107']"
+2720,Lisboa (C. Grande) - Loures (Urmeira),['2720_0'],"['2720_0_2', '2720_0_1']",#C61D23,"['1106', '1107']"
+2722,Areeiro - Via Rara,"['2722_1', '2722_0']","['2722_1_2', '2722_1_1', '2722_0_2', '2722_0_1']",#C61D23,"['1106', '1107']"
+2723,Lisboa (C. Grande) - Zambujal,['2723_0'],"['2723_0_2', '2723_0_1']",#C61D23,"['1106', '1107']"
+2724,Estação Oriente - Loures C.COM. via Tunel Grilo,['2724_0'],"['2724_0_2', '2724_0_1']",#C61D23,"['1106', '1107']"
+2725,Estação Oriente - Loures (zona comercial),['2725_0'],"['2725_0_2', '2725_0_1']",#C61D23,"['1106', '1107']"
+2726,Estação Oriente - Loures C. COM. via Camarate,['2726_0'],"['2726_0_2', '2726_0_1']",#C61D23,"['1106', '1107']"
+2727,Estação Oriente - Loures(HBA) via Unhos,['2727_0'],"['2727_0_2', '2727_0_1']",#C61D23,"['1106', '1107']"
+2728,Bairro Covina - Estação Oriente,['2728_0'],"['2728_0_2', '2728_0_1']",#C61D23,"['1107', '1106']"
+2729,Estação Oriente - Portela Azóia,['2729_0'],"['2729_0_2', '2729_0_1']",#C61D23,"['1106', '1107']"
+2730,Estação Oriente - Santa Iria Azóia,['2730_0'],"['2730_0_2', '2730_0_1']",#C61D23,"['1106', '1107']"
+2731,Estação Oriente - Estação Oriente via Portela,"['2731_1', '2731_0']","['2731_1_2', '2731_1_1', '2731_0_3']",#C61D23,"['1106', '1107']"
+2733,Loures(Super.) - Moscavide (Metro),['2733_0'],"['2733_0_2', '2733_0_1']",#C61D23,"['1107', '1106']"
+2734,Prior Velho - Sacavém (Estação),['2734_0'],"['2734_0_2', '2734_0_1']",#C61D23,"['1107', '1106']"
+2735,Sacavém (Estação) -Sacavém (Estação) via Prior Velho,['2735_0'],['2735_0_3'],#C61D23,"['1107', '1106']"
+2736,Campo Grande - Campo Grande via Sacavém,"['2736_2', '2736_1', '2736_0']","['2736_2_1', '2736_1_1', '2736_0_3']",#C61D23,"['1106', '1107']"
+2740,Ericeira (Terminal) - Lisboa (C. Grande) via A8,"['2740_2', '2740_1', '2740_0']","['2740_2_2', '2740_1_1', '2740_0_2', '2740_0_1']",#FDB71A,"['1109', '1106']"
+2741,Ericeira (Terminal) - Lisboa (C. Grande) via Freixeira e A8,"['2741_1', '2741_0']","['2741_1_2', '2741_1_1', '2741_0_2', '2741_0_1']",#FDB71A,"['1109', '1107', '1106']"
+2742,Lisboa (C. Grande) - Mafra (Terminal),['2742_0'],"['2742_0_2', '2742_0_1']",#FDB71A,"['1106', '1107', '1109']"
+2743,Lisboa (C. Grande) - Póvoa da Galega via A8 e Sete Casas,['2743_0'],"['2743_0_2', '2743_0_1']",#C61D23,"['1106', '1107', '1109']"
+2744,Lisboa (C. Grande) - Póvoa da Galega via A8 Lousa e Freixeira,['2744_0'],"['2744_0_2', '2744_0_1']",#FDB71A,"['1106', '1107', '1109']"
+2745,Póvoa da Galega - Lisboa (C. Grande) via Murteira,"['2745_1', '2745_0']","['2745_1_2', '2745_0_2']",#C61D23,"['1109', '1107', '1106']"
+2746,Lisboa (C. Grande) - Venda do Pinheiro via Milharado e A8 Lousa,['2746_0'],"['2746_0_2', '2746_0_1']",#FDB71A,"['1106', '1107', '1109']"
+2750,Bucelas - Lisboa (C. Grande) via Cabeço de montachique e Odivelas (Metro),['2750_0'],"['2750_0_2', '2750_0_1']",#C61D23,"['1107', '1109', '1116', '1106']"
+2751,Ericeira (Terminal) - Lisboa (C. Grande),"['2751_1', '2751_0']","['2751_1_2', '2751_1_1', '2751_0_2', '2751_0_1']",#C61D23,"['1109', '1107', '1116', '1106']"
+2752,Lisboa (C. Grande) - Malveira (Terminal),['2752_0'],"['2752_0_2', '2752_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2753,Lisboa (C. Grande) - Milharado (CASO) via Lousa,['2753_0'],"['2753_0_2', '2753_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2754,Lisboa (C. Grande) - Póvoa da Galega via Guerreiros e Lousa,"['2754_2', '2754_1', '2754_0']","['2754_2_2', '2754_2_1', '2754_1_2', '2754_0_2', '2754_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2755,Lisboa (C. Grande) - Póvoa da Galega via Casais do Forno,['2755_0'],"['2755_0_2', '2755_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2756,Lisboa (C. Grande) - Póvoa da Galega via Urbanização do Almirante,"['2756_1', '2756_0']","['2756_1_2', '2756_0_2', '2756_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2758,Lisboa (C. Grande) - Mafra (Terminal) via Loures,['2758_0'],"['2758_0_2', '2758_0_1']",#C61D23,"['1106', '1116', '1107', '1109']"
+2761,Bucelas - Lisboa (C. Grande) via Cabeço de Montachique e Ramada,['2761_0'],"['2761_0_2', '2761_0_1']",#C61D23,"['1107', '1109', '1116', '1106']"
+2762,Bucelas - Lisboa (C. Grande) via Ribas e A8 Frielas,['2762_0'],"['2762_0_2', '2762_0_1']",#C61D23,"['1107', '1106']"
+2764,Bucelas - Lisboa (C. Grande),['2764_0'],"['2764_0_2', '2764_0_1']",#C61D23,"['1107', '1116', '1106']"
+2765,Cabeço de Montachique - Lisboa (C. Grande),"['2765_1', '2765_0']","['2765_1_2', '2765_0_2', '2765_0_1']",#C61D23,"['1107', '1109', '1116', '1106']"
+2768,Casal Paradela - Lisboa (C. Grande),['2768_0'],"['2768_0_2', '2768_0_1']",#C61D23,"['1107', '1116', '1106']"
+2769,Cidade Nova - Lisboa (C. Grande),"['2769_3', '2769_2', '2769_1', '2769_0']","['2769_3_1', '2769_2_2', '2769_2_1', '2769_1_2', '2769_1_1', '2769_0_2', '2769_0_1']",#C61D23,"['1107', '1116', '1106']"
+2772,Lisboa (C. Grande) - Torres da Bela Vista via C.Comercial,"['2772_5', '2772_4', '2772_3', '2772_2', '2772_1', '2772_0']","['2772_5_1', '2772_4_2', '2772_4_1', '2772_3_2', '2772_3_1', '2772_2_2', '2772_1_2', '2772_1_1', '2772_0_2', '2772_0_1']",#C61D23,"['1106', '1116', '1107']"
+2774,Frielas - Lisboa (C. Grande),"['2774_1', '2774_0']","['2774_1_2', '2774_1_1', '2774_0_2', '2774_0_1']",#C61D23,"['1107', '1116', '1106']"
+2776,Guerreiros - Lisboa (C. Grande),"['2776_1', '2776_0']","['2776_1_2', '2776_1_1', '2776_0_2', '2776_0_1']",#C61D23,"['1107', '1116', '1106']"
+2780,Loures (C.C. Continente) - Pontinha (Metro),['2780_0'],"['2780_0_2', '2780_0_1']",#C61D23,"['1107', '1116', '1106']"
+2781,Loures (C.C. Continente) - Pontinha (Metro),"['2781_1', '2781_0']","['2781_1_2', '2781_1_1', '2781_0_2', '2781_0_1']",#C61D23,"['1107', '1116', '1106']"
+2782,Bucelas - Lisboa (C.Grande) via Ribas e Manjoeira,['2782_0'],"['2782_0_2', '2782_0_1']",#C61D23,"['1107', '1106']"
+2785,Covas de Ferro - Lisboa (C. Grande),"['2785_1', '2785_0']","['2785_1_1', '2785_0_2', '2785_0_1']",#C61D23,"['1111', '1107', '1116', '1106']"
+2790,Alverca(Est) - Areeiro,"['2790_2', '2790_1', '2790_0']","['2790_2_1', '2790_1_2', '2790_1_1', '2790_0_2', '2790_0_1']",#C61D23,"['1114', '1107', '1106']"
+2791,Alverca (Z.Ind) - Areeiro,"['2791_3', '2791_2', '2791_0']","['2791_3_2', '2791_2_2', '2791_2_1', '2791_0_2', '2791_0_1']",#C61D23,"['1114', '1107', '1106']"
+2792,Arcena - Estação Oriente,"['2792_1', '2792_0']","['2792_1_2', '2792_1_1', '2792_0_2', '2792_0_1']",#C61D23,"['1114', '1107', '1106']"
+2794,F. Casa(Lgo) - Estação Oriente,"['2794_1', '2794_0']","['2794_1_1', '2794_0_2', '2794_0_1']",#C61D23,"['1114', '1107', '1106']"
+2795,Campo Grande - Quinta Piedade,"['2795_3', '2795_2', '2795_1', '2795_0']","['2795_3_2', '2795_2_2', '2795_1_2', '2795_1_1', '2795_0_2', '2795_0_1']",#C61D23,"['1106', '1107', '1114']"
+2796,Lisboa (C. Grande) - Vialonga via Infantado,"['2796_1', '2796_0']","['2796_1_2', '2796_1_1', '2796_0_2', '2796_0_1']",#C61D23,"['1106', '1107', '1114']"
+2797,Vialonga - Lisboa (C. Grande) via A8,"['2797_2', '2797_1', '2797_0']","['2797_2_2', '2797_2_1', '2797_1_2', '2797_1_1', '2797_0_2']",#C61D23,"['1114', '1107', '1106']"
+2801,Ericeira (Terminal) - Lisboa (C. Grande) via A21/A8,"['2801_2', '2801_1', '2801_0']","['2801_2_2', '2801_2_1', '2801_1_2', '2801_1_1', '2801_0_2', '2801_0_1']",#FDB71A,"['1109', '1106']"
+2802,Lisboa (C. Grande) - Mafra (Terminal) via A21,['2802_0'],"['2802_0_2', '2802_0_1']",#FDB71A,"['1106', '1109']"
+2803,Ericeira (Terminal) - Lisboa (C. Grande) via Mafra e A21/A8,"['2803_1', '2803_0']","['2803_1_2', '2803_1_1', '2803_0_2', '2803_0_1']",#FDB71A,"['1109', '1106']"
+2804,Mafra - Lisboa (C. Grande) via A8,"['2804_2', '2804_1', '2804_0']","['2804_2_2', '2804_2_1', '2804_1_1', '2804_0_2', '2804_0_1']",#FDB71A,"['1106', '1109']"
+2805,Encarnação - Lisboa (C. Grande),['2805_0'],"['2805_0_2', '2805_0_1']",#FDB71A,"['1109', '1106']"
+2806,Lisboa (C. Grande) - Livramento,['2806_0'],"['2806_0_2', '2806_0_1']",#FDB71A,"['1106', '1109']"
+2807,Lisboa (C. Grande) - Zambujal via Mafra,['2807_0'],"['2807_0_2', '2807_0_1']",#FDB71A,"['1106', '1109']"
+2810,Arroja - Lisboa (C. Grande),['2810_0'],"['2810_0_2', '2810_0_1']",#C61D23,"['1116', '1106']"
+2811,Caneças (Bairro do Monte Verde) - Lisboa (C. Militar),"['2811_1', '2811_0']","['2811_1_2', '2811_1_1', '2811_0_2', '2811_0_1']",#C61D23,"['1116', '1106']"
+2812,Caneças (Esc. Secundária) - Lisboa (C. Grande) v Sr. Roubado (Metro),"['2812_2', '2812_1', '2812_0']","['2812_2_2', '2812_1_2', '2812_1_1', '2812_0_2', '2812_0_1']",#C61D23,"['1116', '1106']"
+2813,Casal Novo - Lisboa (C. Militar),['2813_0'],"['2813_0_2', '2813_0_1']",#C61D23,"['1116', '1106']"
+2814,Casal Novo - Pontinha (Metro),['2814_0'],"['2814_0_2', '2814_0_1']",#C61D23,"['1116', '1106']"
+2816,Lisboa (C. Grande) - Ramada (Bairro Bons Dias),['2816_0'],"['2816_0_2', '2816_0_1']",#C61D23,"['1106', '1116']"
+2817,Lisboa (C. Militar) - Odivelas (Metro) via Serra da Luz,['2817_0'],"['2817_0_2', '2817_0_1']",#C61D23,"['1106', '1116']"
+2818,Lisboa (C. Militar) - Serra da Amoreira,['2818_0'],"['2818_0_2', '2818_0_1']",#C61D23,"['1106', '1116']"
+2819,Lisboa (C. Militar) - Sr. Roubado (Metro),['2819_0'],"['2819_0_2', '2819_0_1']",#C61D23,"['1106', '1116']"
+2820,Odivelas (Colinas do Cruzeiro) - Pontinha (Metro),['2820_0'],"['2820_0_2', '2820_0_1']",#C61D23,"['1116', '1106']"
+2821,Odivelas (Metro) - Pontinha (Metro),"['2821_1', '2821_0']","['2821_1_1', '2821_0_2', '2821_0_1']",#C61D23,"['1116', '1106']"
+2822,Odivelas (Metro) - Pontinha (Metro) via Serra da Luz,['2822_0'],"['2822_0_2', '2822_0_1']",#C61D23,"['1116', '1106']"
+2823,Pedernais (Bairro Girassol) - Pontinha (Metro),['2823_0'],"['2823_0_2', '2823_0_1']",#C61D23,"['1116', '1106']"
+2824,Pontinha (Metro) - Sr. Roubado (Metro),"['2824_1', '2824_0']","['2824_1_1', '2824_0_2', '2824_0_1']",#C61D23,"['1106', '1116']"
+2830,Casal do Bispo - Lisboa (C. Militar),['2830_0'],"['2830_0_2', '2830_0_1']",#C61D23,"['1116', '1111', '1106']"
+2831,Casal do Bispo - Pontinha (Metro) Via C.Saude Famoes,['2831_0'],"['2831_0_2', '2831_0_1']",#C61D23,"['1116', '1111', '1106']"
+2832,Casal Novo - Lisboa (C. Militar) via Casal de Cambra,['2832_0'],"['2832_0_2', '2832_0_1']",#C61D23,"['1116', '1111', '1106']"
+2833,Pontinh (Metro) - Casal Novo,"['2833_1', '2833_0']","['2833_1_1', '2833_0_3', '2833_0_2']",#C61D23,"['1106', '1116', '1111']"
+2841,Lisboa (C. Grande) - Sobralinho via A1 e Arcena,"['2841_2', '2841_0']","['2841_2_1', '2841_0_2', '2841_0_1']",#C61D23,"['1106', '1114']"
+2842,Lisboa (C. Grande) - Vila Franca de Xira via Alverca e N10,['2842_0'],"['2842_0_2', '2842_0_1']",#C61D23,"['1106', '1114']"
+2850,Costa da Caparica - Póvoa de Santo Adrião (Parque Urbano),['2850_0'],"['2850_0_2', '2850_0_1']",#0C807E,"['1503', '1106', '1116']"
+2900,Lisboa (C. Grande) - São Sebastião,['2900_0'],['2900_0_2'],#FDB71A,"['1109', '1112', '1106']"
+2901,Rolia - Venda do Pinheiro (Terminal),"['2901_1', '2901_0']","['2901_1_1', '2901_0_2', '2901_0_1']",#C61D23,"['1109', '1102', '1107']"
+2905,Aranha (Rotunda) - Ericeira (Terminal),['2905_0'],"['2905_0_2', '2905_0_1']",#BB3E96,"['1113', '1109']"
+2906,Assenta - Encarnação Cruz,['2906_0'],"['2906_0_2', '2906_0_1']",#C61D23,"['1113', '1109']"
+2907,Assenta - Ericeira (Terminal),['2907_0'],['2907_0_2'],#C61D23,"['1109', '1113']"
+2908,Cambelas - Encarnação Cruz,"['2908_1', '2908_0']","['2908_1_2', '2908_0_2', '2908_0_1']",#BB3E96,"['1113', '1109']"
+2910,Ervideira - Malveira (Terminal),"['2910_2', '2910_1', '2910_0']","['2910_2_2', '2910_1_1', '2910_0_2', '2910_0_1']",#C61D23,"['1109', '1112']"
+2911,Ervideira - Malveira (Terminal),"['2911_1', '2911_0']","['2911_1_2', '2911_0_2', '2911_0_1']",#C61D23,"['1109', '1112']"
+2912,São Sebastião - Malveira (Terminal),['2912_0'],"['2912_0_2', '2912_0_1']",#C61D23,"['1109', '1112']"
+2913,Mafra (Parque Desportivo) - Pero Negro (Estação),"['2913_1', '2913_0']","['2913_1_1', '2913_0_2', '2913_0_1']",#C61D23,"['1109', '1112']"
+2914,Mafra (Parque Desportivo) - São Pedro da Cadeira (Rotunda da Aranha),['2914_0'],['2914_0_2'],#BB3E96,"['1109', '1113']"
+2915,Vila Franca do Rosário - Malveira (Terminal),['2915_0'],['2915_0_1'],#C61D23,"['1109', '1112']"
+2920,A-do-Mourão - Alverca (Estação),['2920_0'],"['2920_0_2', '2920_0_1']",#C61D23,"['1102', '1114']"
+2921,V.F.Xira - Arruda Vinhos,['2921_0'],"['2921_0_2', '2921_0_1']",#BB3E96,"['1114', '1102']"
+2926,Castanheira(Est) - Vila F. Xira via Cachoeiras,['2926_0'],"['2926_0_2', '2926_0_1']",#C61D23,"['1114', '1101']"
+2927,Castanheira(CP) - Vila Franca Xira via Loja Nova,['2927_0'],"['2927_0_2', '2927_0_1']",#C61D23,"['1114', '1101']"
+2928,Casais da Granja - V.Franca Xira,['2928_0'],"['2928_0_2', '2928_0_1']",#C61D23,"['1102', '1114', '1101']"
+3001,Almada (Cristo Rei) - Cacilhas (Terminal),['3001_0'],"['3001_0_2', '3001_0_1']",#3D85C6,['1503']
+3003,Almada Forum - Cacilhas (Terminal),['3003_0'],"['3003_0_2', '3003_0_1']",#C61D23,['1503']
+3004,Almada Forum - Marisol,"['3004_1', '3004_0']","['3004_1_1', '3004_0_2', '3004_0_1']",#C61D23,['1503']
+3005,Flexibus Almada | Circular,['3005_0'],['3005_0_3'],#3D85C6,['1503']
+3006,Aroeira | Circular,['3006_0'],"['3006_0_2', '3006_0_1']",#3D85C6,['1503']
+3007,Bairro Fundo Fomento - Cacilhas (Terminal),['3007_0'],"['3007_0_2', '3007_0_1']",#C61D23,['1503']
+3008,Monte da Caparica - Quintinhas,['3008_0'],"['3008_0_2', '3008_0_1']",#C61D23,['1503']
+3009,Cacilhas (Terminal) - Trafaria (Terminal),['3009_0'],"['3009_0_2', '3009_0_1']",#C61D23,['1503']
+3011,"Cacilhas (Terminal) - Costa da Caparica, via Escola José Cardoso Pires",['3011_0'],"['3011_0_2', '3011_0_1']",#C61D23,['1503']
+3012,Cacilhas (Terminal) - Fonte da Telha,"['3012_1', '3012_0']","['3012_1_2', '3012_1_1', '3012_0_2', '3012_0_1']",#C61D23,['1503']
+3013,Cacilhas (Terminal) - Feijó (Almada Forum),['3013_0'],"['3013_0_2', '3013_0_1']",#C61D23,['1503']
+3014,Cacilhas (Terminal) - Raposeira,['3014_0'],"['3014_0_2', '3014_0_1']",#C61D23,['1503']
+3015,Charneca da Caparica - Cova do Vapor,['3015_0'],"['3015_0_2', '3015_0_1']",#C61D23,['1503']
+3017,Charneca da Caparica - Pragal (Estação),['3017_0'],"['3017_0_2', '3017_0_1']",#C61D23,['1503']
+3018,Charneca da Caparica - Sobreda,['3018_0'],"['3018_0_2', '3018_0_1']",#C61D23,['1503']
+3019,Charneca da Caparica - Trafaria (Terminal),['3019_0'],"['3019_0_2', '3019_0_1']",#C61D23,['1503']
+3020,Charneca da Caparica | Circular,['3020_0'],"['3020_0_2', '3020_0_1']",#3D85C6,['1503']
+3021,Costa da Caparica (Terminal) - Monte da Caparica (FCT),['3021_0'],"['3021_0_2', '3021_0_1']",#C61D23,['1503']
+3022,Costa da Caparica (Terminal) - Cacilhas (Terminal),['3022_0'],"['3022_0_2', '3022_0_1']",#C61D23,['1503']
+3023,Costa da Caparica (Terminal) - Laranjeiro,['3023_0'],"['3023_0_2', '3023_0_1']",#C61D23,['1503']
+3024,Costa da Caparica (Terminal) - Pragal (Estação),['3024_0'],"['3024_0_2', '3024_0_1']",#C61D23,['1503']
+3025,"Costa da Caparica (Terminal) - Pragal (Estação), via IC20",['3025_0'],"['3025_0_2', '3025_0_1']",#C61D23,['1503']
+3026,Cova da Piedade - Hospital Garcia de Orta,"['3026_1', '3026_0']","['3026_1_2', '3026_1_1', '3026_0_2', '3026_0_1']",#3D85C6,['1503']
+3027,Hospital Garcia de Orta - Sobreda,['3027_0'],"['3027_0_2', '3027_0_1']",#C61D23,['1503']
+3028,Lazarim | Circular,['3028_0'],['3028_0_3'],#3D85C6,['1503']
+3029,Marco Cabaço | Circular,['3029_0'],"['3029_0_2', '3029_0_1']",#3D85C6,['1503']
+3030,Fonte da Telha - Monte da Caparica (FCT),['3030_0'],"['3030_0_2', '3030_0_1']",#C61D23,['1503']
+3033,Monte da Caparica | Circular,['3033_0'],['3033_0_3'],#3D85C6,['1503']
+3034,Porto Brandão (Terminal) - Quinta do Texugo,['3034_0'],"['3034_0_2', '3034_0_1']",#C61D23,['1503']
+3037,Quintinha | Circular,['3037_0'],"['3037_0_2', '3037_0_1']",#3D85C6,['1503']
+3038,Banática - Porto Brandão,['3038_0'],"['3038_0_2', '3038_0_1']",#3D85C6,['1503']
+3040,Cacilhas - Quinta do Texugo,"['3040_1', '3040_0']","['3040_1_2', '3040_1_1', '3040_0_2', '3040_0_1']",#C61D23,['1503']
+3041,Cacilhas (Terminal) - Caparica (Pilotos),['3041_0'],"['3041_0_2', '3041_0_1']",#C61D23,['1503']
+3101,Amora - Foros de Amora (Estação),['3101_0'],"['3101_0_2', '3101_0_1']",#3D85C6,['1510']
+3103,"Corroios (Estação) - Paio Pires (Centro), via Farinheiras",['3103_0'],"['3103_0_2', '3103_0_1']",#C61D23,['1510']
+3104,Corroios (Estação) - Vale de Milhaços,['3104_0'],"['3104_0_2', '3104_0_1']",#C61D23,['1510']
+3105,Fernão Ferro - Fogueteiro (Estação),['3105_0'],"['3105_0_2', '3105_0_1']",#C61D23,['1510']
+3106,Coina (Estação) - Fernão Ferro,['3106_0'],"['3106_0_2', '3106_0_1']",#3D85C6,['1510']
+3107,Fernão Ferro - Escola Básica Pinhal Frades,['3107_0'],"['3107_0_2', '3107_0_1']",#3D85C6,"['1510', '1511']"
+3108,Fogueteiro (Quinta da Mata) - Foros de Amora (Estação),['3108_0'],"['3108_0_2', '3108_0_1']",#3D85C6,['1510']
+3109,Fogueteiro (Estação) - Parque Empresarial do Seixal,['3109_0'],"['3109_0_2', '3109_0_1']",#C61D23,['1510']
+3110,Fogueteiro (Estação) - Redondos,['3110_0'],"['3110_0_2', '3110_0_1']",#C61D23,['1510']
+3111,Fogueteiro (Estação) - Seixal (Terminal Fluvial),"['3111_1', '3111_0']","['3111_1_2', '3111_1_1', '3111_0_2', '3111_0_1']",#C61D23,['1510']
+3112,"Fogueteiro (Estação) - Seixal (Terminal Fluvial), via Paio Pires",['3112_0'],"['3112_0_2', '3112_0_1']",#3D85C6,['1510']
+3113,"Fogueteiro (Estação) - Seixal (Terminal Fluvial), via Quinta do Cabral",['3113_0'],"['3113_0_2', '3113_0_1']",#3D85C6,['1510']
+3114,Foros de Amora (Estação) - Paio Pires (Quinta Flamância),['3114_0'],"['3114_0_2', '3114_0_1']",#C61D23,['1510']
+3116,"Marisol (Valadares) - Seixal (Terminal Fluvial), via Corroios (Estação)","['3116_1', '3116_0']","['3116_1_2', '3116_1_1', '3116_0_2', '3116_0_1']",#C61D23,"['1510', '1503']"
+3118,Marisol (Valadares) - Seixal (Terminal Fluvial),"['3118_1', '3118_0']","['3118_1_2', '3118_1_1', '3118_0_2', '3118_0_1']",#C61D23,"['1510', '1503']"
+3119,Pinhal Conde Cunha - Seixal (Terminal Fluvial),['3119_0'],"['3119_0_2', '3119_0_1']",#C61D23,['1510']
+3120,Redondos - Seixal (Terminal Fluvial),['3120_0'],"['3120_0_2', '3120_0_1']",#C61D23,['1510']
+3121,Seixal | Circular,['3121_0'],['3121_0_3'],#3D85C6,['1510']
+3201,"Aldeia do Meco - Sesimbra (Terminal), via Aiana",['3201_0'],"['3201_0_2', '3201_0_1']",#C61D23,['1511']
+3202,"Alfarim - Sesimbra (Terminal), via Aiana",['3202_0'],"['3202_0_2', '3202_0_1']",#C61D23,['1511']
+3203,Azoia - Sesimbra (Terminal),['3203_0'],"['3203_0_2', '3203_0_1']",#C61D23,['1511']
+3204,"Azoia - Sesimbra (Terminal), via Serra da Azoia",['3204_0'],"['3204_0_2', '3204_0_1']",#C61D23,['1511']
+3205,Cabo Espichel - Sesimbra (Terminal),['3205_0'],"['3205_0_2', '3205_0_1']",#C61D23,['1511']
+3206,Carrasqueira - Sesimbra (Terminal),['3206_0'],"['3206_0_2', '3206_0_1']",#C61D23,['1511']
+3207,"Carrasqueira - Sesimbra (Terminal), via Valbom e Sampaio",['3207_0'],"['3207_0_2', '3207_0_1']",#C61D23,['1511']
+3208,Aldeia do Meco - Sesimbra (Terminal),['3208_0'],"['3208_0_2', '3208_0_1']",#C61D23,['1511']
+3209,Fetais - Sesimbra (Terminal),['3209_0'],"['3209_0_2', '3209_0_1']",#C61D23,['1511']
+3210,Lagoa de Albufeira - Sesimbra (Terminal),['3210_0'],"['3210_0_2', '3210_0_1']",#C61D23,['1511']
+3211,"Lagoa de Albufeira - Sesimbra (Terminal), via Sampaio",['3211_0'],"['3211_0_2', '3211_0_1']",#C61D23,['1511']
+3212,Maçã (Rua Macieira) - Sesimbra (Terminal),['3212_0'],"['3212_0_2', '3212_0_1']",#C61D23,['1511']
+3213,Pinhal de Cima - Sesimbra (Terminal) | Circular,['3213_0'],['3213_0_3'],#C61D23,['1511']
+3214,Sampaio - Santana,['3214_0'],"['3214_0_2', '3214_0_1']",#C61D23,['1511']
+3215,Fornos - Sampaio (via Aiana),['3215_0'],"['3215_0_2', '3215_0_1']",#C61D23,['1511']
+3216,Maçã – Sampaio,['3216_0'],"['3216_0_2', '3216_0_1']",#C61D23,['1511']
+3217,Azoia - Sampaio,['3217_0'],"['3217_0_2', '3217_0_1']",#C61D23,['1511']
+3218,Sesimbra (Porto de Abrigo) - Sesimbra (Terminal),"['3218_1', '3218_0']","['3218_1_2', '3218_1_1', '3218_0_2', '3218_0_1']",#3D85C6,['1511']
+3220,Sesimbra | Circular,['3220_0'],['3220_0_3'],#3D85C6,['1511']
+3221,"Valbom - Sesimbra (Terminal), via Sampaio",['3221_0'],"['3221_0_2', '3221_0_1']",#C61D23,['1511']
+3222,Quinta do Conde | Circular,['3222_0'],"['3222_0_2', '3222_0_1']",#3D85C6,['1511']
+3223,Sampaio (Moagem) – Sesimbra (Terminal),['3223_0'],"['3223_0_2', '3223_0_1']",#3D85C6,['1511']
+3502,Almada Forum - Paio Pires (Centro),['3502_0'],"['3502_0_2', '3502_0_1']",#C61D23,"['1503', '1510']"
+3503,Almada Forum - Vale de Milhaços,['3503_0'],"['3503_0_2', '3503_0_1']",#C61D23,"['1503', '1510']"
+3504,Hospital Garcia de Orta - Quintinhas,['3504_0'],"['3504_0_2', '3504_0_1']",#C61D23,"['1503', '1510']"
+3505,Cacilhas (Terminal) - Paio Pires (Farinheiras),['3505_0'],"['3505_0_2', '3505_0_1']",#C61D23,"['1503', '1510']"
+3506,"Cacilhas (Terminal) - Corroios (Estação), via Miratejo",['3506_0'],"['3506_0_2', '3506_0_1']",#C61D23,"['1503', '1510']"
+3507,Cacilhas (Terminal) - Marisol,['3507_0'],"['3507_0_2', '3507_0_1']",#C61D23,"['1503', '1510']"
+3508,Cacilhas (Terminal) - Paio Pires (Centro),"['3508_3', '3508_2', '3508_1', '3508_0']","['3508_3_2', '3508_2_2', '3508_2_1', '3508_1_1', '3508_0_2', '3508_0_1']",#C61D23,"['1503', '1510']"
+3509,"Cacilhas (Terminal) - Paio Pires (Centro), via Seixal (Terminal Fluvial) e Amora","['3509_1', '3509_0']","['3509_1_2', '3509_1_1', '3509_0_2', '3509_0_1']",#C61D23,"['1503', '1510']"
+3510,Cacilhas (Terminal) - Pilotos,['3510_0'],"['3510_0_2', '3510_0_1']",#C61D23,"['1503', '1510']"
+3511,Cacilhas (Terminal) - Pinheirinho,"['3511_1', '3511_0']","['3511_1_1', '3511_0_2', '3511_0_1']",#C61D23,"['1503', '1510']"
+3512,Cacilhas (Terminal) - Quinta Princesa,['3512_0'],"['3512_0_2', '3512_0_1']",#C61D23,"['1503', '1510']"
+3513,Cacilhas (Terminal) - Santa Marta do Pinhal,"['3513_1', '3513_0']","['3513_1_2', '3513_1_1', '3513_0_2', '3513_0_1']",#C61D23,"['1503', '1510']"
+3514,Cacilhas (Terminal) - Vale de Milhaços,['3514_0'],"['3514_0_2', '3514_0_1']",#C61D23,"['1503', '1510']"
+3515,Corroios (Estação) - Caparica (Pilotos),['3515_0'],"['3515_0_2', '3515_0_1']",#C61D23,"['1510', '1503']"
+3516,Charneca da Caparica - Corroios (Estação),['3516_0'],"['3516_0_2', '3516_0_1']",#C61D23,"['1503', '1510']"
+3517,Chegadinho - Corroios (Estação),['3517_0'],"['3517_0_2', '3517_0_1']",#C61D23,"['1503', '1510']"
+3518,Corroios (Estação) - Vale de Figueira,['3518_0'],"['3518_0_2', '3518_0_1']",#C61D23,"['1510', '1503']"
+3519,Costa da Caparica (Terminal) - Corroios (Estação),['3519_0'],"['3519_0_2', '3519_0_1']",#C61D23,"['1503', '1510']"
+3520,Costa da Caparica (Terminal) - Quinta do Brasileiro,['3520_0'],"['3520_0_2', '3520_0_1']",#C61D23,"['1503', '1510']"
+3521,Cruz de Pau - Fonte da Telha,"['3521_1', '3521_0']","['3521_1_2', '3521_1_1', '3521_0_2', '3521_0_1']",#C61D23,"['1510', '1503']"
+3522,Fonte da Telha - Paio Pires (Centro),['3522_0'],"['3522_0_2', '3522_0_1']",#C61D23,"['1503', '1510']"
+3523,"Fonte da Telha - Paio Pires (Quinta Flamância), via Seixal (Terminal Fluvial) e Foros de Amora (Estação)","['3523_1', '3523_0']","['3523_1_2', '3523_1_1', '3523_0_2', '3523_0_1']",#C61D23,"['1503', '1510']"
+3524,Hospital Garcia de Orta - Marisol,['3524_0'],"['3524_0_2', '3524_0_1']",#C61D23,"['1503', '1510']"
+3525,Hospital Garcia de Orta - Miratejo,['3525_0'],"['3525_0_2', '3525_0_1']",#C61D23,"['1503', '1510']"
+3526,Laranjeiro - Pinheirinho,"['3526_1', '3526_0']","['3526_1_2', '3526_1_1', '3526_0_2', '3526_0_1']",#C61D23,"['1503', '1510']"
+3527,Monte da Caparica (FCT) - Paio Pires (Bairro Cucena),"['3527_1', '3527_0']","['3527_1_1', '3527_0_2', '3527_0_1']",#C61D23,"['1503', '1510']"
+3528,Monte da Caparica (FCT) - Paio Pires (Centro),['3528_0'],"['3528_0_2', '3528_0_1']",#C61D23,"['1503', '1510']"
+3535,Cacilhas (Terminal) - Quinta do Conde,['3535_0'],"['3535_0_2', '3535_0_1']",#C61D23,"['1503', '1510', '1511']"
+3536,Cacilhas (Terminal) - Sesimbra (Terminal),"['3536_1', '3536_0']","['3536_1_1', '3536_0_2', '3536_0_1']",#C61D23,"['1503', '1510', '1511']"
+3540,Zambujal - Coina (Estação),['3540_0'],"['3540_0_2', '3540_0_1']",#C61D23,"['1511', '1510']"
+3541,"Coina (Estação) - Fernão Ferro, via Casal do Sapo e Pinhal do General",['3541_0'],"['3541_0_2', '3541_0_1']",#C61D23,"['1510', '1511']"
+3542,Coina (Estação) - Praia do Meco,['3542_0'],"['3542_0_2', '3542_0_1']",#C61D23,"['1510', '1511']"
+3543,"Coina (Estação) - Quinta do Conde, via Estrada de Coina",['3543_0'],"['3543_0_2', '3543_0_1']",#C61D23,"['1504', '1510', '1511']"
+3544,Sesimbra (Terminal) - Coina (Estação) via Marco do Grilo,['3544_0'],"['3544_0_2', '3544_0_1']",#C61D23,"['1511', '1510']"
+3545,Corroios (Estação) - Sesimbra (Terminal),['3545_0'],"['3545_0_2', '3545_0_1']",#C61D23,"['1510', '1511']"
+3546,Cruz de Pau - Quinta do Conde,['3546_0'],"['3546_0_2', '3546_0_1']",#C61D23,"['1510', '1511']"
+3547,Fogueteiro (Estação) - Quinta do Conde,['3547_0'],"['3547_0_2', '3547_0_1']",#C61D23,"['1510', '1511']"
+3548,Marco do Grilo - Quinta do Conde,['3548_0'],"['3548_0_2', '3548_0_1']",#C61D23,"['1511', '1510']"
+3549,"Quinta do Conde - Sesimbra (Terminal), via Sampaio e Marco do Grilo","['3549_1', '3549_0']","['3549_1_2', '3549_1_1', '3549_0_2', '3549_0_1']",#C61D23,"['1511', '1510']"
+3590,Estação de Coina – Festival SBSR,['3590_0'],"['3590_0_2', '3590_0_1']",#C61D23,"['1504', '1511']"
+3601,Barreiro - Cova da Piedade (Metro),['3601_0'],"['3601_0_2', '3601_0_1']",#C61D23,"['1504', '1510', '1503']"
+3605,"Cacilhas (Terminal) - Setúbal (ITS), via Azeitão",['3605_0'],"['3605_0_2', '3605_0_1']",#C61D23,"['1503', '1510', '1504', '1511', '1512']"
+3615,Barreiro - Seixal,['3615_0'],"['3615_0_2', '3615_0_1']",#C61D23,"['1504', '1510', '1506']"
+3620,Coina (Estação) - Quinta do Conde,['3620_0'],"['3620_0_2', '3620_0_1']",#C61D23,"['1510', '1504', '1511']"
+3625,Barreiro - Sesimbra (Terminal),['3625_0'],"['3625_0_2', '3625_0_1']",#C61D23,"['1504', '1511', '1512']"
+3626,Coina (Estação) - Vila Nogueira de Azeitão,['3626_0'],"['3626_0_2', '3626_0_1']",#C61D23,"['1504', '1511', '1512']"
+3635,"Coina (Estação) - Sesimbra (Terminal), via Azeitão e Sampaio",['3635_0'],"['3635_0_2', '3635_0_1']",#C61D23,"['1504', '1511', '1512']"
+3640,Azoia - Vila Nogueira de Azeitão,['3640_0'],"['3640_0_2', '3640_0_1']",#C61D23,"['1511', '1512']"
+3641,"Quinta do Conde - Sampaio, via Azeitão",['3641_0'],"['3641_0_2', '3641_0_1']",#C61D23,"['1511', '1512']"
+3642,Sesimbra (Terminal) - Setúbal (Hospital),['3642_0'],"['3642_0_2', '3642_0_1']",#C61D23,"['1511', '1512']"
+3650,Moita - Sesimbra (Terminal),['3650_0'],"['3650_0_2', '3650_0_1']",#0C807E,"['1506', '1504', '1510', '1511']"
+3701,Cova da Piedade (HPA) - Algés (Terminal),['3701_0'],"['3701_0_2', '3701_0_1']",#C61D23,"['1503', '1106', '1110']"
+3702,Almada (Parque Urbano) - Lisboa (C. Universitária),['3702_0'],"['3702_0_2', '3702_0_1']",#C61D23,"['1503', '1106']"
+3703,Almada (Parque Urbano) - Lisboa (Areeiro),"['3703_1', '3703_0']","['3703_1_1', '3703_0_2', '3703_0_1']",#C61D23,"['1503', '1106']"
+3704,Charneca da Caparica - Lisboa (M. Pombal),['3704_0'],"['3704_0_2', '3704_0_1']",#C61D23,"['1503', '1106']"
+3705,Charneca da Caparica (Centro) - Lisboa (Sete Rios),['3705_0'],"['3705_0_2', '3705_0_1']",#C61D23,"['1503', '1106']"
+3706,"Charneca da Caparica - Lisboa (Sete Rios), via Feijó",['3706_0'],"['3706_0_2', '3706_0_1']",#C61D23,"['1503', '1106']"
+3708,Costa da Caparica (Terminal) - Lisboa (C. Sodré),['3708_0'],"['3708_0_2', '3708_0_1']",#C61D23,"['1503', '1106']"
+3709,Costa da Caparica (Terminal) - Lisboa (M. Pombal),['3709_0'],"['3709_0_2', '3709_0_1']",#C61D23,"['1503', '1106']"
+3710,Costa da Caparica (Terminal) - Lisboa (Areeiro),['3710_0'],"['3710_0_2', '3710_0_1']",#C61D23,"['1503', '1106']"
+3711,Monte da Caparica (FCT) - Lisboa (Sete Rios),['3711_0'],"['3711_0_2', '3711_0_1']",#C61D23,"['1503', '1106']"
+3715,Lisboa (M. Pombal) - Santa Marta do Pinhal,['3715_0'],"['3715_0_2', '3715_0_1']",#C61D23,"['1106', '1503', '1510']"
+3716,Lisboa (Sete Rios) - Marisol,['3716_0'],"['3716_0_2', '3716_0_1']",#C61D23,"['1106', '1503', '1510']"
+3717,Lisboa (Sete Rios) - Quinta do Brasileiro,['3717_0'],"['3717_0_2', '3717_0_1']",#C61D23,"['1106', '1503', '1510']"
+3720,Lisboa (Sete Rios) - Quinta do Conde,['3720_0'],"['3720_0_2', '3720_0_1']",#FDB71A,"['1106', '1503', '1510', '1511']"
+3721,Lisboa (Sete Rios) - Sesimbra (Terminal),['3721_0'],"['3721_0_2', '3721_0_1']",#FDB71A,"['1106', '1503', '1510', '1511']"
+4001,Alcochete | Circular,['4001_0'],['4001_0_3'],#3D85C6,['1502']
+4002,São Francisco | Circular,['4002_0'],['4002_0_3'],#C61D23,['1502']
+4101,Alhos Vedros (Escola José Afonso) - Arroteias,['4101_0'],"['4101_0_2', '4101_0_1']",#C61D23,['1506']
+4102,Moita (Estação) - Sarilhos Pequenos via Gaio-Rosário,['4102_0'],"['4102_0_2', '4102_0_1']",#C61D23,['1506']
+4103,Moita (Estação) - Sarilhos Pequenos,['4103_0'],"['4103_0_2', '4103_0_1']",#3D85C6,['1506']
+4104,Moita | Circular via centro,['4104_0'],['4104_0_3'],#3D85C6,['1506']
+4105,Moita | Circular via Carvalhinho,['4105_0_3'],['4105_0_3'],#3D85C6,['1506']
+4106,Alhos Vedros | Circular via Centro de Saúde,['4106_0'],['4106_0_3'],#3D85C6,['1506']
+4107,Alhos Vedros | Circular via Arroteias,['4107_0'],['4107_0_3'],#3D85C6,['1506']
+4202,Afonsoeiro - Bairro do Saldanha via Bairro da Calçada,['4202_0'],"['4202_0_2', '4202_0_1']",#C61D23,['1507']
+4203,Afonsoeiro - Montijo (Terminal Fluvial) via Bairro da Liberdade,['4203_0'],"['4203_0_2', '4203_0_1']",#3D85C6,['1507']
+4204,Bairro do Charqueirão - Montijo (Terminal Fluvial),['4204_0'],"['4204_0_2', '4204_0_1']",#3D85C6,['1507']
+4205,Bairro do Charqueirão - Montijo (Terminal Fluvial) via Vale Porim,['4205_0'],"['4205_0_2', '4205_0_1']",#C61D23,"['1502', '1507']"
+4206,Bairro Esteval - Montijo (Terminal Fluvial),['4206_0'],"['4206_0_2', '4206_0_1']",#3D85C6,['1507']
+4207,Montijo (Área Comercial) - Montijo (Terminal Fluvial),"['4207_2', '4207_1', '4207_0']","['4207_2_2', '4207_1_1', '4207_0_2', '4207_0_1']",#3D85C6,['1507']
+4208,Montijo (Terminal Fluvial) - Sarilhos Grandes (Estr. 4 Marcos),['4208_0'],"['4208_0_2', '4208_0_1']",#C61D23,['1507']
+4211,Craveiras - Pegões | Circular,['4211_0'],['4211_0_3'],#3D85C6,['1507']
+4212,Foros Boavista - Pegões,['4212_0'],"['4212_0_2', '4212_0_1']",#C61D23,['1507']
+4301,Palmela (Terminal) | Circular Escolas,['4301_0'],['4301_0_3'],#3D85C6,['1508']
+4302,Palmela (Estação) - Palmela (Terminal),['4302_0'],"['4302_0_2', '4302_0_1']",#C61D23,['1508']
+4303,Palmela | Circular,['4303_0'],['4303_0_3'],#3D85C6,['1508']
+4304,Palmela (Terminal) - Penalva,['4304_0'],"['4304_0_2', '4304_0_1']",#C61D23,['1508']
+4305,Brejos do Assa - Palmela (Terminal),['4305_0'],"['4305_0_2', '4305_0_1']",#C61D23,['1508']
+4307,Loja Nova - Palmela (Terminal),"['4307_1', '4307_0']","['4307_1_2', '4307_0_2', '4307_0_1']",#C61D23,['1508']
+4308,Palmela (Terminal) - Pinhal Novo (Estação),['4308_0'],"['4308_0_2', '4308_0_1']",#C61D23,['1508']
+4310,Águas de Moura - Poceirão,['4310_0'],"['4310_0_2', '4310_0_1']",#C61D23,['1508']
+4311,Asseiceira - Poceirão,['4311_0'],"['4311_0_2', '4311_0_1']",#C61D23,['1508']
+4312,Poceirão - Vale Abrunheira (X) via Fernando Pó,"['4312_2', '4312_1', '4312_0']","['4312_2_2', '4312_1_2', '4312_1_1', '4312_0_2', '4312_0_1']",#C61D23,"['1508', '1512']"
+4313,São Gonçalo - Penalva,['4313_0'],"['4313_0_2', '4313_0_1']",#C61D23,['1508']
+4320,Pinhal Novo | Circular,['4320_0'],['4320_0_3'],#3D85C6,['1508']
+4321,Pinhal Novo - Quinta do Anjo,['4321_0'],"['4321_0_2', '4321_0_1']",#C61D23,['1508']
+4322,Pinhal Novo - Rio Frio,"['4322_1', '4322_0']","['4322_1_2', '4322_1_1', '4322_0_2', '4322_0_1']",#C61D23,['1508']
+4401,Cachofarra - Setúbal (Hospital),['4401_0'],"['4401_0_2', '4401_0_1']",#C61D23,['1512']
+4402,Estefanilha - Setúbal (ITS),['4402_0'],"['4402_0_2', '4402_0_1']",#C61D23,['1512']
+4403,Ferro Engomar (Terminal) - Setúbal (Av. Luísa Todi) via Amoreiras,['4403_0'],"['4403_0_2', '4403_0_1']",#3D85C6,['1512']
+4404,Interfaces Setúbal | Circular,['4404_0'],['4404_0_3'],#3D85C6,['1512']
+4406,Manteigadas - Setúbal (Mercado),"['4406_1', '4406_0']","['4406_1_2', '4406_1_1', '4406_0_2', '4406_0_1']",#3D85C6,['1512']
+4407,Manteigadas - Setúbal (Mercado) via Bairro 25 de Abril,"['4407_1', '4407_0']","['4407_1_1', '4407_0_1']",#C61D23,['1512']
+4408,Manteigadas - Setúbal (Mercado) via Bela Vista,['4408_0'],['4408_0_2'],#C61D23,['1512']
+4409,Setúbal (Bº Quinta Santo António) - Setúbal (Bº Viso) via Montebelo,['4409_0'],"['4409_0_2', '4409_0_1']",#C61D23,['1512']
+4410,Manteigadas (Esc. Profissional) - Poço Mouro via Centro Comercial,['4410_0'],"['4410_0_2', '4410_0_1']",#C61D23,['1512']
+4412,Morgada - Setúbal (Mercado),['4412_0'],"['4412_0_2', '4412_0_1']",#C61D23,['1512']
+4414,Outão (Hospital) - Setúbal (ITS),['4414_0'],"['4414_0_2', '4414_0_1']",#C61D23,['1512']
+4415,Outão (Hospital) - Setúbal (ITS) via vale da Rasca,['4415_0'],"['4415_0_2', '4415_0_1']",#C61D23,['1512']
+4416,Poço Mouro - Setúbal (ITS),['4416_0'],"['4416_0_2', '4416_0_1']",#C61D23,['1512']
+4417,Poço Mouro - Setúbal (ITS) via Manteigadas,['4417_0'],"['4417_0_2', '4417_0_1']",#C61D23,['1512']
+4418,Setúbal (Centro Comercial) - Setúbal (Av. 5 Outubro),['4418_0'],"['4418_0_2', '4418_0_1']",#C61D23,['1512']
+4419,Brejos Canes - Setúbal (Saboaria),['4419_0'],"['4419_0_2', '4419_0_1']",#C61D23,['1512']
+4420,Setúbal (Centro Comercial) - Setúbal (ITS),['4420_0'],"['4420_0_2', '4420_0_1']",#3D85C6,['1512']
+4421,Setúbal (Bairro Camolas) - Setúbal (Casal Figueiras),['4421_0'],"['4421_0_2', '4421_0_1']",#C61D23,['1512']
+4422,Setúbal (Bairro Camolas) - Setúbal (Casal Figueiras) via Bairro do Viso,"['4422_2', '4422_1', '4422_0']","['4422_2_2', '4422_1_1', '4422_0_2', '4422_0_1']",#C61D23,['1512']
+4424,Setúbal (Bairro Viso) - Manteigadas (Piscinas),['4424_0'],['4424_0_1'],#C61D23,['1512']
+4425,Setúbal (Escola Viso) - Mitrena,"['4425_1', '4425_0']","['4425_1_1', '4425_0_2', '4425_0_1']",#C61D23,['1512']
+4426,Setúbal (Bairro do Viso) - Setúbal (Bairro Quinta Santo António),"['4426_4', '4426_3', '4426_2', '4426_1', '4426_0']","['4426_4_2', '4426_3_2', '4426_2_1', '4426_1_2', '4426_1_1', '4426_0_2', '4426_0_1']",#3D85C6,['1512']
+4427,Setúbal (Bela Vista) - Setúbal (Mercado),['4427_0'],"['4427_0_2', '4427_0_1']",#3D85C6,['1512']
+4428,Setúbal (Casal Figueiras) - Vale Ana Gomes,['4428_0'],"['4428_0_2', '4428_0_1']",#C61D23,['1512']
+4429,Setúbal (Centro Saúde) - Setúbal (Mercado),['4429_0'],"['4429_0_2', '4429_0_1']",#C61D23,['1512']
+4430,Setúbal (Hospital) - Setúbal (Montalvão),['4430_0'],"['4430_0_2', '4430_0_1']",#3D85C6,['1512']
+4431,Setúbal (ITS) - Setúbal (Quinta Varzinha),['4431_0'],"['4431_0_2', '4431_0_1']",#3D85C6,['1512']
+4432,Setúbal (ITS) - Vale de Choupo,['4432_0'],"['4432_0_2', '4432_0_1']",#C61D23,['1512']
+4433,Alto Guerra - Setúbal (Casal Figueiras),['4433_0'],"['4433_0_2', '4433_0_1']",#C61D23,['1512']
+4434,Setúbal (Mercado 2 de Abril) - Setúbal (R. Timor),"['4434_1', '4434_0']","['4434_1_2', '4434_1_1', '4434_0_2', '4434_0_1']",#3D85C6,['1512']
+4435,Biscainho - Faralhão,['4435_0'],"['4435_0_2', '4435_0_1']",#C61D23,['1512']
+4436,Setúbal (Mercado) - Setúbal (Terroa),['4436_0'],"['4436_0_2', '4436_0_1']",#3D85C6,['1512']
+4437,Faralhão - Setúbal (ITS),['4437_0'],"['4437_0_2', '4437_0_1']",#C61D23,['1512']
+4438,Setúbal (Monte Belo Norte) - Setúbal (Saboaria),"['4438_1', '4438_0']","['4438_1_2', '4438_1_1', '4438_0_2', '4438_0_1']",#C61D23,['1512']
+4439,Praias do Sado - Setúbal (ITS),['4439_0'],"['4439_0_2', '4439_0_1']",#C61D23,['1512']
+4440,Setúbal (Monte Belo Norte) - Setúbal (Saboaria) via Centro Comercial,['4440_0'],"['4440_0_2', '4440_0_1']",#C61D23,['1512']
+4441,Setúbal (Saboaria) - Setúbal (Vale Cobro),['4441_0'],"['4441_0_2', '4441_0_1']",#C61D23,['1512']
+4442,Praias do Sado (Estação) - Setúbal (Bela Vista),"['4442_1', '4442_0']","['4442_1_1', '4442_0_2', '4442_0_1']",#C61D23,['1512']
+4443,Setúbal (Politécnico) - Praias do Sado,['4443_0'],"['4443_0_2', '4443_0_1']",#C61D23,['1512']
+4451,Mitrena (Lisnave) - Setúbal (ITS),['4451_0'],"['4451_0_2', '4451_0_1']",#C61D23,['1512']
+4452,Mitrena (Portucel) - Setúbal (ITS),"['4452_1', '4452_0']","['4452_1_2', '4452_1_1', '4452_0_2', '4452_0_1']",#C61D23,['1512']
+4453,Mitrena (Portucel) - Setúbal (ITS) via Estrada Graça,['4453_0'],"['4453_0_2', '4453_0_1']",#C61D23,['1512']
+4463,Azeitão | Circular via R. José Augusto Coelho,['4463_0'],['4463_0_3'],#3D85C6,['1512']
+4464,Azeitão | Circular via R. Dr. Francisco Gonçalves de Oliveira,['4464_0'],['4464_0_3'],#3D85C6,['1512']
+4465,Escolas Azeitão | Trajeto 1,['4465_0'],['4465_0_1'],#3D85C6,['1512']
+4466,Escolas Azeitão | Trajeto 2,['4466_0'],['4466_0_1'],#3D85C6,['1512']
+4467,Escolas Azeitão | Trajeto 3,['4467_0_1'],['4467_0_1'],#3D85C6,['1512']
+4468,Escolas Azeitão | Trajeto 4,['4468_0_1'],['4468_0_1'],#3D85C6,['1512']
+4472,Praia da Figueirinha - Setúbal (ITS),['4472_1'],"['4472_1_2', '4472_1_1']",#C61D23,['1512']
+4481,Livramento-Montebelo | Circular via Bonfim,['4481_0'],['4481_0_3'],#C61D23,['1512']
+4482,Livramento-Montebelo | Circular via Terroa,['4482_0'],['4482_0_3'],#C61D23,['1512']
+4501,Alcochete (Freeport) - Montijo (Terminal Fluvial),"['4501_1', '4501_0']","['4501_1_2', '4501_1_1', '4501_0_2', '4501_0_1']",#C61D23,"['1502', '1507']"
+4503,Atalaia (Bairro Charqueirão) - Montijo (Bairro Areias),['4503_0'],"['4503_0_2', '4503_0_1']",#C61D23,"['1507', '1502']"
+4504,Alcochete (Freeport) - Montijo (Terminal Fluvial) via Atalaia e Passil,['4504_0'],"['4504_0_2', '4504_0_1']",#C61D23,"['1507', '1502']"
+4512,Alcochete (Freeport) - Setúbal (ITS) via Alto Estanqueiro,"['4512_1', '4512_0']","['4512_1_2', '4512_1_1', '4512_0_2', '4512_0_1']",#C61D23,"['1502', '1507', '1508', '1512']"
+4513,Alcochete (Freeport) - Pinhal Novo,['4513_0'],"['4513_0_2', '4513_0_1']",#C61D23,"['1502', '1507', '1508']"
+4514,Canha - Montijo (Terminal Rodoviário) via Pegões,"['4514_3', '4514_1', '4514_0']","['4514_3_2', '4514_3_1', '4514_1_1', '4514_0_2', '4514_0_1']",#C61D23,"['1507', '1508', '1502']"
+4515,Montijo (Terminal Rodoviário) - Pegões,['4515_0'],"['4515_0_2', '4515_0_1']",#C61D23,"['1507', '1502', '1508']"
+4516,Montijo (Terminal Rodoviário) - Rio Frio,"['4516_1', '4516_0']","['4516_1_1', '4516_0_2', '4516_0_1']",#C61D23,"['1507', '1502', '1508']"
+4517,Montijo (Terminal Rodoviário) - Setúbal (ITS),['4517_0'],['4517_0_2'],#C61D23,"['1512', '1508', '1507']"
+4520,Faias - Pegões,['4520_0'],"['4520_0_2', '4520_0_1']",#C61D23,"['1507', '1508']"
+4521,Faias - Pinhal Novo via Lagameças,['4521_0'],"['4521_0_2', '4521_0_1']",#C61D23,"['1507', '1508']"
+4522,Faias - Poceirão,['4522_0'],"['4522_0_2', '4522_0_1']",#C61D23,"['1507', '1508']"
+4523,Montijo (Terminal Rodoviário) - Pinhal Novo,['4523_0'],['4523_0_2'],#C61D23,"['1508', '1507']"
+4524,Palmela (Terminal) - Pegões,['4524_0'],"['4524_0_2', '4524_0_1']",#C61D23,"['1508', '1507']"
+4525,Faias - Pinhal Novo Via N5,['4525_0'],"['4525_0_2', '4525_0_1']",#C61D23,"['1507', '1508']"
+4530,Bairro Vila Morena - Pinhal Novo,['4530_0'],"['4530_0_2', '4530_0_1']",#C61D23,"['1506', '1508', '1507']"
+4531,Moita (Esc. Secundária) - Palmela (Terminal),['4531_0'],"['4531_0_2', '4531_0_1']",#C61D23,"['1506', '1508']"
+4532,Moita (Estação) - Moita (Bairro 1º Maio),['4532_0'],"['4532_0_2', '4532_0_1']",#C61D23,"['1506', '1508']"
+4540,Águas de Moura - Setúbal (ITS),"['4540_1', '4540_0']","['4540_1_2', '4540_1_1', '4540_0_2', '4540_0_1']",#C61D23,"['1508', '1512']"
+4541,Algeruz - Setúbal (Av. Luísa Todi),['4541_0'],"['4541_0_2', '4541_0_1']",#C61D23,"['1508', '1512']"
+4542,Algeruz - Setúbal (ITS),['4542_0'],"['4542_0_2', '4542_0_1']",#C61D23,"['1508', '1512']"
+4543,Algeruz - Setúbal (ITS) via Poçoilos,['4543_0'],"['4543_0_2', '4543_0_1']",#C61D23,"['1508', '1512']"
+4544,Bairro Margaça - Setúbal (ITS),"['4544_2', '4544_1', '4544_0']","['4544_2_2', '4544_1_1', '4544_0_2', '4544_0_1']",#C61D23,"['1508', '1512']"
+4545,Biscainho - Setúbal (Bela Vista),['4545_0'],"['4545_0_2', '4545_0_1']",#C61D23,"['1512', '1508']"
+4546,Biscainho - Setúbal (ITS),['4546_0'],"['4546_0_2', '4546_0_1']",#C61D23,"['1512', '1508']"
+4548,Lagameças - Setúbal (ITS),['4548_0'],"['4548_0_2', '4548_0_1']",#C61D23,"['1508', '1512']"
+4549,Palmela (Terminal) - Setúbal (ITS),['4549_0'],"['4549_0_2', '4549_0_1']",#C61D23,"['1508', '1512']"
+4550,Palmela (Terminal) - Vila Nogueira de Azeitão,['4550_0'],"['4550_0_2', '4550_0_1']",#C61D23,"['1508', '1512']"
+4551,Palmela (Alameda Nun'Álvares Pereira) - Setúbal (Av. Luísa Todi),['4551_0'],"['4551_0_2', '4551_0_1']",#C61D23,"['1508', '1512']"
+4552,Brejos de Azeitão (Parque do Morango) - Palmela (Terminal),['4552_0'],"['4552_0_2', '4552_0_1']",#C61D23,"['1512', '1508']"
+4560,São Gonçalo - Vila Nogueira de Azeitão (Escola Básica 2 3),['4560_0'],"['4560_0_2', '4560_0_1']",#C61D23,"['1508', '1512']"
+4562,Setúbal (ITS) - Vila Nogueira de Azeitão (Escola) via Palmela (Estação),['4562_0'],"['4562_0_2', '4562_0_1']",#C61D23,"['1512', '1508']"
+4600,Alcochete (Freeport) - Barreiro (Terminal) via Samouco,"['4600_2', '4600_1', '4600_0']","['4600_2_2', '4600_2_1', '4600_1_2', '4600_1_1', '4600_0_2', '4600_0_1']",#C61D23,"['1502', '1507', '1506', '1504']"
+4602,Alhos Vedros (Estação) - Barreiro (Terminal),['4602_0'],"['4602_0_2', '4602_0_1']",#C61D23,"['1506', '1504']"
+4604,Barreiro (Terminal) - Moita (Escola Secundária),['4604_0'],"['4604_0_2', '4604_0_1']",#C61D23,"['1504', '1506']"
+4605,Lavradio - Pinhal do Forno,['4605_0'],"['4605_0_2', '4605_0_1']",#C61D23,"['1504', '1506']"
+4610,Bairro dos Marinheiros - Barreiro (Terminal),['4610_0'],"['4610_0_2', '4610_0_1']",#C61D23,"['1508', '1504']"
+4611,Penalva (Estação) - Moita (Esc. Secundária),['4611_0'],"['4611_0_2', '4611_0_1']",#C61D23,"['1508', '1504', '1506']"
+4612,Bairro dos Marinheiros - Palmela (Terminal),['4612_0'],"['4612_0_2', '4612_0_1']",#C61D23,"['1504', '1508']"
+4620,Moita (Esc. Secundária) - Paio Pires,['4620_0'],"['4620_0_2', '4620_0_1']",#C61D23,"['1506', '1504', '1510']"
+4621,Moita (Esc. Secundária) - Seixal (Terminal Fluvial),['4621_0'],"['4621_0_2', '4621_0_1']",#C61D23,"['1506', '1504', '1510']"
+4632,Coina (Estação) - Quinta do Anjo via Vendas de Azeitão,['4632_0'],"['4632_0_2', '4632_0_1']",#C61D23,"['1504', '1511', '1512', '1508']"
+4641,Quinta do Conde - Setúbal (ITS),"['4641_1', '4641_0']","['4641_1_2', '4641_1_1', '4641_0_2', '4641_0_1']",#C61D23,"['1511', '1512']"
+4701,Lisboa (Oriente) - Vale da Amoreira,"['4701_2', '4701_1', '4701_0']","['4701_2_2', '4701_1_2', '4701_0_2', '4701_0_1']",#FDB71A,"['1106', '1507', '1506']"
+4702,Lisboa (Oriente) - São Francisco,['4702_0'],"['4702_0_2', '4702_0_1']",#FDB71A,"['1106', '1502']"
+4704,Atalaia - Lisboa (Oriente) via B. Areias e B. Esteval,['4704_0'],"['4704_0_2', '4704_0_1']",#FDB71A,"['1507', '1106']"
+4705,Lisboa (Oriente) - Samouco,['4705_0'],"['4705_0_2', '4705_0_1']",#FDB71A,"['1106', '1507', '1502']"
+4706,Montijo (Urb. Alto dos Moinhos) - Lisboa (Oriente),['4706_0'],"['4706_0_2', '4706_0_1']",#FDB71A,"['1507', '1106']"
+4707,Lisboa (Oriente) - Montijo (Terminal Rodoviário),['4707_0'],"['4707_0_2', '4707_0_1']",#FDB71A,"['1106', '1507']"
+4710,Lisboa (Oriente) - Palmela (Terminal),['4710_0'],"['4710_0_2', '4710_0_1']",#FDB71A,"['1106', '1508']"
+4711,Lisboa (Oriente) - Pinhal Novo,['4711_0'],['4711_0_2'],#FDB71A,"['1508', '1106']"
+4715,Lisboa (Oriente) - Setúbal (Terminal Várzea) via Pinhal Novo,['4715_0'],"['4715_0_2', '4715_0_1']",#FDB71A,"['1106', '1508', '1512']"
+4720,Lisboa (Oriente) - Setúbal (Terminal Várzea),"['4720_1', '4720_0']","['4720_1_2', '4720_0_2', '4720_0_1']",#FDB71A,"['1106', '1512']"
+4725,Lisboa (Sete Rios) - Setúbal (Terminal Várzea),['4725_0'],"['4725_0_2', '4725_0_1']",#FDB71A,"['1106', '1503', '1512']"
+4730,Lisboa (Sete Rios) - Setúbal (ITS) via Fogueteiro,"['4730_2', '4730_1', '4730_0']","['4730_2_2', '4730_2_1', '4730_1_2', '4730_1_1', '4730_0_2', '4730_0_1']",#C61D23,"['1106', '1503', '1510', '1504', '1511', '1512']"
+4901,Landeira - Setúbal (ITS),"['4901_1', '4901_0']","['4901_1_2', '4901_1_1', '4901_0_2', '4901_0_1']",#C61D23,"['0712', '1508', '1512']"
+4902,Pegões - Landeira,['4902_0'],"['4902_0_2', '4902_0_1']",#C61D23,"['1507', '1508', '0712']"
+4905,Faias - Vendas Novas,"['4905_1', '4905_0']","['4905_1_1', '4905_0_2', '4905_0_1']",#BB3E96,"['1507', '1508', '0712']"
+4906,Setúbal (ITS) - Vendas Novas via Landeira,"['4906_1', '4906_0']","['4906_1_2', '4906_0_2', '4906_0_1']",#BB3E96,"['1512', '1508', '0712', '1507']"
