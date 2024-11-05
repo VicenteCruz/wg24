@@ -1,0 +1,29 @@
+CREATE TABLE stops_api (
+    stop_id INTEGER PRIMARY KEY,
+    stop_code FLOAT,  -- or consider removing this if data is always NULL
+    stop_name TEXT NOT NULL,
+    stop_lat FLOAT NOT NULL,
+    stop_lon FLOAT NOT NULL,
+	routes INTEGER[] NOT NULL,
+	DISTRICT INTEGER NOT NULL,
+	patterns INTEGER[] NOT NULL,
+municipality_id INTEGER NOT NULL
+);
+
+COPY stops_api(stop_id, stop_code, stop_name, stop_lat, stop_lon, routes, district, patterns, municipality_id)
+FROM 'stops_api.csv'
+DELIMITER ','
+CSV HEADER;
+
+CREATE EXTENSION IF NOT EXISTS postgis;
+
+ALTER TABLE stops_api
+ADD COLUMN geom geometry(Point, 4326);
+
+UPDATE stops_api
+SET geom = ST_SetSRID(ST_MakePoint(stop_lon, stop_lat), 4326);
+
+SELECT ST_DistanceSphere(
+    (SELECT geom FROM stops_api WHERE stop_id = 10001),
+    (SELECT geom FROM stops_api WHERE stop_id = 10002)
+) AS distance_in_meters;

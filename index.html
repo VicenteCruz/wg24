@@ -63,6 +63,19 @@
         #sideMenu.show {
             transform: translateX(0); /* Show the sidebar */
         }
+
+        #fullExtentButton {
+            position: absolute; /* Position the button */
+            bottom: 100px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            padding: 10px 15px; /* Button padding */
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            z-index: 1000; /* Ensure button is on top */
+        }
     </style>
 </head>
 <body>
@@ -70,6 +83,7 @@
     <button id="refreshButton">Refresh</button>
     <div id="lastRefresh">Last Refresh: Never</div>
     <button id="menuButton">Open Menu</button>
+    <button id="fullExtentButton">Full Extent</button>
     <div id="sideMenu">
         <h3 style="color: black;">Menu</h3>
         <ul>
@@ -80,9 +94,47 @@
                 </label>
             </li>
             <li>
-                <button id="filterBusesButton">Filter Buses</button>
+                <label for="districtSelect">Select District:</label>
+                <select id="districtSelect">
+                    <option value="0">-- Select District --</option>
+                    <option value="11">District 11</option>
+                    <option value="15">District 15</option>
+                </select>
             </li>
-            <!-- Add more options as needed -->
+            <li>
+                <label for="busStopIdInput">Enter Bus Stop ID:</label>
+                <input type="text" id="busStopIdInput" placeholder="Bus Stop ID">
+                <button id="selectBusStopButton">Select Bus Stop</button>
+            </li>
+            <li>
+                <label for="municipalitySelect">Select Municipality:</label>
+                <select id="municipalitySelect">
+                    <option value="0">-- Select Municipality --</option>
+                    <option value="1101">Municipality 1101</option>
+                    <option value="1102">Municipality 1102</option>
+                    <option value="1105">Municipality 1105</option>
+                    <option value="1106">Municipality 1106</option>
+                    <option value="1107">Municipality 1107</option>
+                    <option value="1109">Municipality 1109</option>
+                    <option value="1110">Municipality 1110</option>
+                    <option value="1111">Municipality 1111</option>
+                    <option value="1112">Municipality 1112</option>
+                    <option value="1113">Municipality 1113</option>
+                    <option value="1114">Municipality 1114</option>
+                    <option value="1115">Municipality 1115</option>
+                    <option value="1116">Municipality 1116</option>
+                    <option value="1502">Municipality 1502</option>
+                    <option value="1503">Municipality 1503</option>
+                    <option value="1504">Municipality 1504</option>
+                    <option value="1506">Municipality 1506</option>
+                    <option value="1507">Municipality 1507</option>
+                    <option value="1508">Municipality 1508</option>
+                    <option value="1510">Municipality 1510</option>
+                    <option value="1511">Municipality 1511</option>
+                    <option value="1512">Municipality 1512</option>
+                    <option value="712">Municipality 712</option>
+                </select>
+            </li>
         </ul>
     </div>
 
@@ -93,7 +145,6 @@
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '© OpenStreetMap'
         }).addTo(map); // Add tile layer to the map
 
         var zoomControl = L.control.zoom({
@@ -101,9 +152,8 @@
         }).addTo(map);
 
         var lastRefreshTime = 'Never'; // Initialize last refresh time
-        var markers = []; // Array to hold vehicle markers
-        var busData = []; // Array to hold bus data from API
-        var busStopMarkers = []; // Array to hold bus stop markers
+        var vehicleMarkers = {}; // Object to hold vehicle markers by vehicle ID
+        var busStopMarkers = {}; // Change from array to object
 
         function updateLastRefresh() {
             lastRefreshTime = new Date().toLocaleTimeString(); // Update to current time
@@ -111,69 +161,123 @@
         }
 
         function loadBusPositions() {
+            fetch('https://api.cmet.pt/patterns/4710_0_1')
+            .then(response => response.json())
+            .then(data => {
+                //console.log(data);
+            })
+
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
             .then(data => {
-                console.log(data); // Inspect the API response
-                // Clear previous markers
-                markers.forEach(marker => {
-                    map.removeLayer(marker); // Remove marker from the map
-                });
-                markers = []; // Clear the markers array
+                console.log(data);
+
+                const newMarkers = {}; // Temporary object to hold new markers
 
                 if (Array.isArray(data) && data.length > 0) { // Check if data is valid
                     data.forEach(vehicle => {
                         if (vehicle.lat && vehicle.lon) { // Check for coordinates
-                            // Create a marker for each vehicle
-                            var marker = L.marker([vehicle.lat, vehicle.lon]).addTo(map); // Add marker to the initialized map
-                            markers.push(marker); // Store the marker in the array
-                            
-                            // Create a popup with vehicle information
-                            var popupContent = `
-                                <strong>Line:</strong> ${vehicle.line_id || 'N/A'}<br>
-                                <strong>Latitude:</strong> ${vehicle.lat || 'N/A'}<br>
-                                <strong>Longitude:</strong> ${vehicle.lon || 'N/A'}<br>
-                                <strong>Speed:</strong> ${vehicle.speed || 'N/A'}<br>
-                                <strong>Status:</strong> ${vehicle.current_status || 'N/A'}<br>
-                                <strong>Stop id:</strong> ${vehicle.stop_id || 'N/A'}
-                            `;
-                            marker.bindPopup(popupContent); // Bind the popup to the marker
+                            const vehicleId = vehicle.id; // Assuming vehicle.id is unique
+
+                            // Check if the marker already exists
+                            if (vehicleId in vehicleMarkers) {
+                                // Update the existing marker's position if it has changed
+                                const existingMarker = vehicleMarkers[vehicleId];
+                                const newLatLng = L.latLng(vehicle.lat, vehicle.lon);
+                                if (existingMarker.getLatLng().lat !== vehicle.lat || existingMarker.getLatLng().lng !== vehicle.lon) {
+                                    existingMarker.setLatLng(newLatLng); // Update position
+                                }
+                            } else {
+                                // Create a new marker if it doesn't exist
+                                const newMarker = L.marker([vehicle.lat, vehicle.lon]).addTo(map);
+                                newMarkers[vehicleId] = newMarker; // Store the new marker
+                                
+                                // Create a popup with vehicle information
+                                var popupContent = `
+                                    <strong>Id:</strong> ${vehicle.id || 'N/A'}<br>
+                                    <strong>Line:</strong> ${vehicle.line_id || 'N/A'}<br>
+                                    <strong>Latitude:</strong> ${vehicle.lat || 'N/A'}<br>
+                                    <strong>Longitude:</strong> ${vehicle.lon || 'N/A'}<br>
+                                    <strong>Speed:</strong> ${vehicle.speed || 'N/A'}<br>
+                                    <strong>Status:</strong> ${vehicle.current_status || 'N/A'}<br>
+                                    <strong>Stop id:</strong> ${vehicle.stop_id ? `<a href="javascript:void(0);" onclick="selectBusStopById(${vehicle.stop_id - 0})">${vehicle.stop_id - 0}</a>` : 'N/A'}
+                                `;
+                                newMarker.bindPopup(popupContent); // Bind the popup to the new marker
+                            }
                         } else {
-                            console.warn('Missing coordinates for vehicle:', vehicle);
+                            //console.warn('Missing coordinates for vehicle:', vehicle);
                         }
                     });
                 } else {
                     console.warn('No vehicles found or invalid API response.');
                 }
+
+                // Update the markers object with new markers
+                vehicleMarkers = { ...vehicleMarkers, ...newMarkers }; // Merge new markers into the existing markers object
                 updateLastRefresh(); // Update last refresh time after loading data
+
+                const showBusPoints = document.getElementById('toggleBusPoints').checked;
+                if (!showBusPoints) {
+                    Object.values(newMarkers).forEach(marker => {
+                        map.removeLayer(marker); // Remove marker from the map if checkbox is unchecked
+                    });
+                }
             })
             .catch(error => console.error('API Error:', error));
         }
 
         function loadBusStops() {
             fetch('data.php') // Fetch bus stops from the PHP script
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    // Clear previous bus stop markers
-                    busStopMarkers.forEach(marker => {
-                        map.removeLayer(marker); // Remove marker from the map
-                    });
-                    busStopMarkers = []; // Clear the bus stop markers array
+                    console.log('Fetched Data:', data); // Log the fetched data
+                    // Clear existing bus stop markers from the map
+                    Object.values(busStopMarkers).forEach(marker => map.removeLayer(marker)); // Remove old markers from the map
+                    busStopMarkers = {}; // Clear the busStopMarkers object
 
                     if (data.features && data.features.length > 0) { // Check if data is valid
                         data.features.forEach(stop => {
                             var coords = stop.geometry.coordinates;
-                            var marker = L.marker([coords[1], coords[0]]).addTo(map); // Add marker to the initialized map
-                            busStopMarkers.push(marker); // Store the marker in the array
+                            const district = stop.properties.district; // Assuming each stop has a district property
+                            const municipality = stop.properties.municipality;
+                            const stopId = stop.properties.id; // Get the stop ID
+
+                            // Create a new circle marker for bus stops
+                            const newMarker = L.circleMarker([coords[1], coords[0]], {
+                                radius: 5, // Size of the circle
+                                fillColor: 'red', // Fill color
+                                color: 'red', // Border color
+                                weight: 1, // Border weight
+                                opacity: 1, // Border opacity
+                                fillOpacity: 1 // Fill opacity
+                            });
+
+                            // Set the properties on the marker
+                            newMarker.district = district;
+                            newMarker.municipality = municipality;
+                            newMarker.stopId = stopId; // Store the stop ID
+
+                            // Add the marker to the map
+                            newMarker.addTo(map);
+                            busStopMarkers[stopId] = newMarker; // Store the new marker using stop ID as key
 
                             // Create a popup with bus stop information
                             var popupContent = `
-                                <strong>Stop Name:</strong> ${stop.properties.name || 'N/A'}
+                                <strong>Stop Name:</strong> ${stop.properties.name || 'N/A'}<br>
+                                <strong>District:</strong> ${district || 'N/A'}<br>
+                                <strong>Municipality:</strong> ${municipality || 'N/A'}<br>
+                                <strong>Additional Info:</strong> ${stop.properties.routes || 'N/A'}
                             `;
-                            marker.bindPopup(popupContent); // Bind the popup to the marker
+                            newMarker.bindPopup(popupContent); // Bind the popup to the new marker
+                            //console.log("stop id" + stopId);
                         });
                     } else {
-                        console.warn('No bus stops found or invalid API response.');
+                        //console.warn('No bus stops found or invalid API response.');
                     }
                 })
                 .catch(error => console.error('API Error:', error));
@@ -182,9 +286,10 @@
         // Call loadBusStops to fetch and display bus stops
         loadBusStops(); 
 
+
         document.getElementById('refreshButton').addEventListener('click', loadBusPositions); // Add click event to button
 
-        setInterval(loadBusPositions, 5000); 
+        setInterval(loadBusPositions, 10000); // Fetch every 10 seconds
 
         loadBusPositions(); 
 
@@ -201,29 +306,97 @@
         document.getElementById('toggleBusPoints').addEventListener('change', (event) => {
             if (event.target.checked) {
                 // Show bus points
-                markers.forEach(marker => {
+                Object.values(vehicleMarkers).forEach(marker => {
                     marker.addTo(map); // Add marker to the map
                 });
             } else {
                 // Hide bus points
-                markers.forEach(marker => {
+                Object.values(vehicleMarkers).forEach(marker => {
                     map.removeLayer(marker); // Remove marker from the map
                 });
             }
         });
 
-        document.getElementById('filterBusesButton').addEventListener('click', () => {
-            const filterLineId = prompt("Enter line ID to filter (leave blank for all):");
-            
-            // Show or hide markers based on the filter
-            markers.forEach(marker => {
-                if (filterLineId === "" || marker.line_id === filterLineId) {
-                    marker.addTo(map); // Show marker if it matches or if filter is empty
+        document.getElementById('districtSelect').addEventListener('change', () => {
+            const selectedDistrict = parseInt(document.getElementById('districtSelect').value, 10); // Parse selected district as an integer
+        
+            // Show or hide markers based on the selected district
+            Object.values(busStopMarkers).forEach(marker => {
+                const matchesDistrict = selectedDistrict === 0 || marker.district === selectedDistrict; // Check district match
+                
+                if (matchesDistrict) {
+                    if (!map.hasLayer(marker)) {
+                        marker.addTo(map); // Show marker if it matches
+                    }
                 } else {
-                    map.removeLayer(marker); // Remove marker if it doesn't match
+                    if (map.hasLayer(marker)) {
+                        map.removeLayer(marker); // Remove marker if it doesn't match
+                    }
                 }
             });
         });
+
+        document.getElementById('municipalitySelect').addEventListener('change', () => {
+            const selectedMunicipality = parseInt(document.getElementById('municipalitySelect').value, 10); // Parse selected district as an integer
+        
+            // Show or hide markers based on the selected Municipality
+            Object.values(busStopMarkers).forEach(marker => {
+                const matchesMunicipality = selectedMunicipality === 0 || marker.municipality === selectedMunicipality; // Check district match
+                
+                if (matchesMunicipality) {
+                    if (!map.hasLayer(marker)) {
+                        marker.addTo(map); // Show marker if it matches
+                    }
+                } else {
+                    if (map.hasLayer(marker)) {
+                        map.removeLayer(marker); // Remove marker if it doesn't match
+                    }
+                }
+            });
+        });
+
+        document.getElementById('fullExtentButton').addEventListener('click', () => {
+            const visibleMarkers = []; // Array to hold currently visible markers
+
+            // Check bus stop markers
+            Object.values(busStopMarkers).forEach(marker => {
+                if (map.hasLayer(marker)) {
+                    visibleMarkers.push(marker); // Add to visible markers if currently displayed
+                }
+            });
+
+            // Check vehicle markers
+            Object.values(vehicleMarkers).forEach(marker => {
+                if (map.hasLayer(marker)) {
+                    visibleMarkers.push(marker); // Add to visible markers if currently displayed
+                }
+            });
+
+            // Adjust the map view to fit the bounds of the visible markers
+            if (visibleMarkers.length > 0) {
+                const group = new L.featureGroup(visibleMarkers); // Create a feature group from visible markers
+                map.fitBounds(group.getBounds()); // Adjust the map view to fit the bounds of the visible markers
+            } else {
+                alert("No visible points to focus on."); // Alert if no markers are visible
+            }
+        });
+
+        function selectBusStopById(stopId) {
+            // Check if the bus stop exists in the busStopMarkers object
+            if (busStopMarkers[stopId]) {
+                const marker = busStopMarkers[stopId]; // Get the marker by ID
+                map.setView(marker.getLatLng(), 15); // Center the map on the marker and set zoom level
+                marker.openPopup(); // Open the popup for the selected bus stop
+            } else {
+                console.warn('Bus stop with ID ' + stopId + ' not found.');
+            }
+        }
+
+        document.getElementById('selectBusStopButton').addEventListener('click', () => {
+            const stopId = document.getElementById('busStopIdInput').value; // Get the input value
+            selectBusStopById(stopId); // Call the function to select the bus stop
+        });
+
     </script>
 </body>
 </html>
