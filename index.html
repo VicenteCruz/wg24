@@ -85,6 +85,7 @@
             cursor: pointer; /* Pointer cursor on hover */
             z-index: 1000; /* Ensure button is on top */
         }
+
     </style>
 </head>
 <body>
@@ -122,9 +123,10 @@
                 </select>
             </li>
             <li>
-                <label for="busStopIdInput">Enter Bus Stop ID:</label>
-                <input type="text" id="busStopIdInput" placeholder="Bus Stop ID">
-                <button id="selectBusStopButton">Select Bus Stop</button>
+                <label for="busLineInput">Enter Bus Line:</label>
+                <input type="text" id="busLineInput" placeholder="Bus Line">
+                <button id="selectBusLineButton">Select Bus Line</button>
+                <button id="showAllBusesButton">Show All Buses</button>
             </li>
             <li>
                 <label for="municipalitySelect">Select Municipality:</label>
@@ -191,7 +193,6 @@
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
             .then(data => {
-                console.log(data);
 
                 const newMarkers = {}; // Temporary object to hold new markers
 
@@ -214,14 +215,21 @@
                                 newMarkers[vehicleId] = newMarker; // Store the new marker
                                 
                                 // Create a popup with vehicle information
+                                newMarker.options.id = vehicle.id || 'N/A'; // Save the vehicle id into the marker
+                                newMarker.options.line = vehicle.line_id || 'N/A'; // Save the vehicle line into the marker
+                                newMarker.options.latitude = vehicle.lat || 'N/A'; // Save the vehicle latitude into the marker
+                                newMarker.options.longitude = vehicle.lon || 'N/A'; // Save the vehicle longitude into the marker
+                                newMarker.options.speed = vehicle.speed || 'N/A'; // Save the vehicle speed into the marker
+                                newMarker.options.status = vehicle.current_status || 'N/A'; // Save the vehicle status into the marker
+                                newMarker.options.stopId = vehicle.stop_id ? `<a href="javascript:void(0);" onclick="selectBusStopById(${vehicle.stop_id - 0})">${vehicle.stop_id - 0}</a>` : 'N/A'; // Save the vehicle stop id into the marker
                                 var popupContent = `
-                                    <strong>Id:</strong> ${vehicle.id || 'N/A'}<br>
-                                    <strong>Line:</strong> ${vehicle.line_id || 'N/A'}<br>
-                                    <strong>Latitude:</strong> ${vehicle.lat || 'N/A'}<br>
-                                    <strong>Longitude:</strong> ${vehicle.lon || 'N/A'}<br>
-                                    <strong>Speed:</strong> ${vehicle.speed || 'N/A'}<br>
-                                    <strong>Status:</strong> ${vehicle.current_status || 'N/A'}<br>
-                                    <strong>Stop id:</strong> ${vehicle.stop_id ? `<a href="javascript:void(0);" onclick="selectBusStopById(${vehicle.stop_id - 0})">${vehicle.stop_id - 0}</a>` : 'N/A'}
+                                    <strong>Id:</strong> ${newMarker.options.id}<br>
+                                    <strong>Line:</strong> ${newMarker.options.line}<br>
+                                    <strong>Latitude:</strong> ${newMarker.options.latitude}<br>
+                                    <strong>Longitude:</strong> ${newMarker.options.longitude}<br>
+                                    <strong>Speed:</strong> ${newMarker.options.speed}<br>
+                                    <strong>Status:</strong> ${newMarker.options.status}<br>
+                                    <strong>Stop id:</strong> ${newMarker.options.stopId}
                                 `;
                                 newMarker.bindPopup(popupContent); // Bind the popup to the new marker
                             }
@@ -445,21 +453,25 @@
             }
         });
 
-        function selectBusStopById(stopId) {
-            // Check if the bus stop exists in the busStopMarkers object
-            if (busStopMarkers[stopId]) {
-                const marker = busStopMarkers[stopId]; // Get the marker by ID
-                map.setView(marker.getLatLng(), 15); // Center the map on the marker and set zoom level
-                marker.openPopup(); // Open the popup for the selected bus stop
-            } else {
-                console.warn('Bus stop with ID ' + stopId + ' not found.');
-            }
+        function selectBusLineId(stopId) {
+            Object.values(vehicleMarkers).forEach(marker => {
+                if(marker.options.line === stopId) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
         }
 
-        document.getElementById('selectBusStopButton').addEventListener('click', () => {
-            const stopId = document.getElementById('busStopIdInput').value; // Get the input value
-            selectBusStopById(stopId); // Call the function to select the bus stop
+        document.getElementById('selectBusLineButton').addEventListener('click', () => {
+            const lineId = document.getElementById('busLineInput').value; // Get the input value
+            selectBusLineId(lineId); // Call the function to select the bus stop
         });
+
+        document.getElementById('showAllBusesButton').addEventListener('click', () => {
+            Object.values(vehicleMarkers).forEach(marker => {
+                map.addLayer(marker);
+        })});
 
         // Event listener for the dropdown menu
         document.getElementById('mapStyles').addEventListener('change', function() {
