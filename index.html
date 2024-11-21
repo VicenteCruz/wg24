@@ -86,6 +86,20 @@
             z-index: 1000; /* Ensure button is on top */
         }
 
+        #resetButton {
+            position: absolute; /* Position the button */
+            bottom: 150px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            padding: 10px 15px; /* Button padding */
+            background-color: #ff0000; /* Button color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            z-index: 1000; /* Ensure button is on top */
+            display: none; /* Initially hidden reset button */
+        }
+
     </style>
 </head>
 <body>
@@ -105,6 +119,7 @@
     <div id="lastRefresh">Last Refresh: Never</div>
     <button id="menuButton">Open Menu</button>
     <button id="fullExtentButton">Full Extent</button>
+    <button id="resetButton" style="display: none;">Reset Map</button>
     <div id="sideMenu">
         <h3 style="color: black;">Menu</h3>
         <ul>
@@ -112,6 +127,12 @@
                 <label>
                     <input type="checkbox" id="toggleBusPoints" checked>
                     Show Bus Points
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" id="toggleAllBusStops" checked>
+                    Show All Bus Stops
                 </label>
             </li>
             <li>
@@ -178,6 +199,7 @@
         var currentLineShow = 0; //Var that define the visualizaton of bus line, if 0, then all buses appear
         var vehicleMarkers = {}; // Object to hold vehicle markers by vehicle ID
         var busStopMarkers = {}; // Change from array to object
+        var currentItineraryLayer = null; // Variable to hold the current itinerary layer
 
         function updateLastRefresh() {
             lastRefreshTime = new Date().toLocaleTimeString(); // Update to current time
@@ -185,11 +207,6 @@
         }
 
         function loadBusPositions() {
-            fetch('https://api.cmet.pt/patterns/4710_0_1')
-            .then(response => response.json())
-            .then(data => {
-                //console.log(data);
-            })
 
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
@@ -233,6 +250,13 @@
                                     <strong>Stop id:</strong> ${newMarker.options.stopId}
                                 `;
                                 newMarker.bindPopup(popupContent); // Bind the popup to the new marker
+
+                                // Add click event to open the popup
+                                newMarker.on('click', function() {
+                                    this.openPopup(); // Open the popup on click
+                                    selectBusLineId(vehicle.line_id);
+                                    showItinerary(vehicle.pattern_id);
+                                });
                             }
                         } else {
                             //console.warn('Missing coordinates for vehicle:', vehicle);
@@ -464,6 +488,87 @@
             });
         }
 
+        function selectBusStopId(stopIds) {
+            // Convert stopIds array to integers
+            const intStopIds = stopIds.map(id => parseInt(id));
+            
+            Object.values(busStopMarkers).forEach(marker => {
+                const intMarkerId = parseInt(marker.stopId);
+                
+                if(intStopIds && intStopIds.includes(intMarkerId)) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        }
+
+        function showItinerary(pattern) {
+            fetch(`https://api.cmet.pt/patterns/${pattern}`)
+            .then(response => response.json())
+            .then(data => {
+                const stopIds = data[0].path.map(p => p.stop_id);
+                selectBusStopId(stopIds);
+
+                const shape_id = data[0].shape_id;
+                fetch(`https://api.cmet.pt/shapes/${shape_id}`)
+                .then(response => response.json())
+                .then(data => {
+                    const geojson = data.geojson;
+                    
+                    // Remove the existing itinerary layer if it exists
+                    if (currentItineraryLayer) {
+                        map.removeLayer(currentItineraryLayer);
+                    }
+
+                    // Add the new itinerary layer
+                    currentItineraryLayer = L.geoJSON(geojson, {
+                        style: {
+                            color: '#ff0000', // line color
+                            weight: 2, // line width
+                            opacity: 0.5 // line opacity
+                        }
+                    }).addTo(map);
+
+                    // Show the reset button
+                    document.getElementById('resetButton').style.display = 'block';
+                })
+            })
+        }
+
+        function resetMap() {
+            // Remove the itinerary layer
+            if (currentItineraryLayer) {
+                map.removeLayer(currentItineraryLayer);
+                currentItineraryLayer = null;
+            }
+
+            // Hide the reset button
+            document.getElementById('resetButton').style.display = 'none';
+
+            // Reset the map view based on checkboxes
+            const showBusPoints = document.getElementById('toggleBusPoints').checked;
+            const showAllBusStops = document.getElementById('toggleAllBusStops').checked;
+
+            Object.values(vehicleMarkers).forEach(marker => {
+                if (showBusPoints) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+
+            Object.values(busStopMarkers).forEach(marker => {
+                if (showAllBusStops) {
+                    marker.addTo(map);
+                } else {
+                    map.removeLayer(marker);
+                }
+            });
+        }
+
+        document.getElementById('resetButton').addEventListener('click', resetMap); // Attach reset function to button
+
         document.getElementById('selectBusLineButton').addEventListener('click', () => {
             const lineId = document.getElementById('busLineInput').value; // Get the input value
             currentLineShow = lineId;
@@ -480,6 +585,24 @@
         // Event listener for the dropdown menu
         document.getElementById('mapStyles').addEventListener('change', function() {
             changeMapStyle(this.value);
+        });
+
+        document.getElementById('toggleAllBusStops').addEventListener('change', (event) => {
+            if (event.target.checked) {
+                // Show all bus stops
+                Object.values(busStopMarkers).forEach(marker => {
+                    if (!map.hasLayer(marker)) {
+                        marker.addTo(map); // Add marker to the map if not already added
+                    }
+                });
+            } else {
+                // Hide all bus stops
+                Object.values(busStopMarkers).forEach(marker => {
+                    if (map.hasLayer(marker)) {
+                        map.removeLayer(marker); // Remove marker from the map if it is currently added
+                    }
+                });
+            }
         });
 
     </script>
