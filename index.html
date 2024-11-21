@@ -91,13 +91,30 @@
             bottom: 150px; /* Distance from the bottom */
             right: 20px; /* Distance from the right */
             padding: 10px 15px; /* Button padding */
-            background-color: #ff0000; /* Button color */
+            background-color: #ec0000; /* Button color */
             color: white; /* Text color */
             border: none; /* Remove border */
             border-radius: 5px; /* Rounded corners */
             cursor: pointer; /* Pointer cursor on hover */
             z-index: 1000; /* Ensure button is on top */
             display: none; /* Initially hidden reset button */
+        }
+
+        .bus-marker {
+            background-color: #007bff; /* Background color */
+            color: white; /* Text color */
+            border-radius: 10px; /* Rounded corners */
+            padding: 5px; /* Padding inside the rectangle */
+            text-align: center; /* Center the text */
+            width: 40px; /* Width of the rectangle */
+            font-size: 14px; /* Font size for the bus line number */
+        }
+
+        .simple-point {
+            background-color: #007bff;
+            border-radius: 10%;
+            width: 10px;
+            height: 10px;
         }
 
     </style>
@@ -207,7 +224,6 @@
         }
 
         function loadBusPositions() {
-
             fetch('https://api.cmet.pt/vehicles')
             .then(response => response.json())
             .then(data => {
@@ -227,9 +243,17 @@
                                 if (existingMarker.getLatLng().lat !== vehicle.lat || existingMarker.getLatLng().lng !== vehicle.lon) {
                                     existingMarker.setLatLng(newLatLng); // Update position
                                 }
-                            } else if(currentLineShow === 0 || currentLineShow === vehicle.line_id){
-                                // Create a new marker if it doesn't exist
-                                const newMarker = L.marker([vehicle.lat, vehicle.lon]).addTo(map);
+                            } else if(currentLineShow === 0 || currentLineShow === vehicle.line_id) {
+                                // If it's a new marker, fetch the pattern info first
+                                
+                                // Create a custom marker with a rectangle and rounded borders
+                                const busMarker = L.divIcon({
+                                    className: 'bus-marker', // Use the CSS class for styling
+                                    html: `<div>${vehicle.line_id}</div>`, // HTML for the marker
+                                    iconSize: [40, 20], // Size of the icon
+                                    iconAnchor: [20, 10], // Point of the icon which will correspond to marker's location
+                                });
+                                const newMarker = L.marker([vehicle.lat, vehicle.lon], { icon: busMarker }).addTo(map); // Use custom icon
                                 newMarkers[vehicleId] = newMarker; // Store the new marker
                                 
                                 // Create a popup with vehicle information
@@ -240,6 +264,7 @@
                                 newMarker.options.speed = vehicle.speed || 'N/A'; // Save the vehicle speed into the marker
                                 newMarker.options.status = vehicle.current_status || 'N/A'; // Save the vehicle status into the marker
                                 newMarker.options.stopId = vehicle.stop_id ? `<a href="javascript:void(0);" onclick="selectBusStopById(${vehicle.stop_id - 0})">${vehicle.stop_id - 0}</a>` : 'N/A'; // Save the vehicle stop id into the marker
+                                
                                 var popupContent = `
                                     <strong>Id:</strong> ${newMarker.options.id}<br>
                                     <strong>Line:</strong> ${newMarker.options.line}<br>
@@ -249,6 +274,7 @@
                                     <strong>Status:</strong> ${newMarker.options.status}<br>
                                     <strong>Stop id:</strong> ${newMarker.options.stopId}
                                 `;
+                                //console.log(patternData);
                                 newMarker.bindPopup(popupContent); // Bind the popup to the new marker
 
                                 // Add click event to open the popup
@@ -258,12 +284,8 @@
                                     showItinerary(vehicle.pattern_id);
                                 });
                             }
-                        } else {
-                            //console.warn('Missing coordinates for vehicle:', vehicle);
                         }
                     });
-                } else {
-                    console.warn('No vehicles found or invalid API response.');
                 }
 
                 // Update the markers object with new markers
@@ -604,6 +626,72 @@
                 });
             }
         });
+
+        // Function to calculate distance between two points in meters
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371000; // Radius of the Earth in meters
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = 
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // Distance in meters
+        }
+
+        map.on('click', (event) => {
+            const clickLatLng = event.latlng; // Get the latitude and longitude of the click
+
+            resetMap();
+
+            document.getElementById('resetButton').style.display = 'block';
+
+            // Hide all bus stop markers initially
+            Object.values(busStopMarkers).forEach(marker => {
+                map.removeLayer(marker);
+            });
+
+            // Show only bus stops within 200 meters of the clicked point
+            Object.values(busStopMarkers).forEach(marker => {
+                const distance = calculateDistance(clickLatLng.lat, clickLatLng.lng, marker.getLatLng().lat, marker.getLatLng().lng);
+                if (distance <= 1000) {
+                    marker.addTo(map); // Show marker if within 200 meters
+                }
+            });
+        });
+
+        function updateMarkers() {
+            const zoomLevel = map.getZoom(); // Get the current zoom level
+
+            console.log(zoomLevel);
+            Object.values(vehicleMarkers).forEach(marker => {
+                if (zoomLevel >= 13) { // Define the zoom level threshold
+                    // Use the .bus-marker styled icon
+                    const busMarker = L.divIcon({
+                        className: 'bus-marker',
+                        html: `<div>${marker.options.line}</div>`,
+                        iconSize: [40, 20],
+                        iconAnchor: [20, 10],
+                    });
+                    marker.setIcon(busMarker);
+                } else {
+                    // Use a simple div icon to represent a point
+                    const pointMarker = L.divIcon({
+                        className: 'simple-point',
+                        html: '',
+                        iconSize: [zoomLevel -5, zoomLevel-5],
+                        iconAnchor: [5, 5],
+                    });
+                    marker.setIcon(pointMarker);
+                }
+            });
+        }
+
+        map.on('zoomend', updateMarkers); // Add event listener for zoom changes
+
+        // Call updateBusMarkers initially to set the correct icon based on the initial zoom level
+        updateMarkers();
 
     </script>
 </body>
