@@ -101,17 +101,19 @@
         }
 
         .bus-marker {
-            background-color: #007bff; /* Background color */
-            color: white; /* Text color */
+            background-color: #ebeb00; /* Background color */
+            color: rgb(2, 1, 1); /* Text color */
             border-radius: 10px; /* Rounded corners */
-            padding: 5px; /* Padding inside the rectangle */
+            padding: 0px; /* Padding inside the rectangle */
             text-align: center; /* Center the text */
             width: 40px; /* Width of the rectangle */
             font-size: 14px; /* Font size for the bus line number */
+            border: 4px solid #e2d300a9; /* Border color */
         }
 
         .simple-point {
-            background-color: #007bff;
+            background-color: #ebeb00;
+            border: 1px solid #000000a9; /* Border color */
             border-radius: 10%;
             width: 10px;
             height: 10px;
@@ -548,7 +550,7 @@
                         style: {
                             color: '#ff0000', // line color
                             weight: 2, // line width
-                            opacity: 0.5 // line opacity
+                            opacity: 1 // line opacity
                         }
                     }).addTo(map);
 
