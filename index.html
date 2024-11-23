@@ -305,60 +305,52 @@
         }
 
         function loadBusStops() {
-            fetch('data.php') // Fetch bus stops from the PHP script
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Fetched Data:', data); // Log the fetched data
-                    // Clear existing bus stop markers from the map
-                    Object.values(busStopMarkers).forEach(marker => map.removeLayer(marker)); // Remove old markers from the map
-                    busStopMarkers = {}; // Clear the busStopMarkers object
+            fetch('https://api.cmet.pt/stops')
+            .then(response => response.json())
+            .then(data => {
+                // Clear existing bus stop markers from the map
+                Object.values(busStopMarkers).forEach(marker => map.removeLayer(marker));
+                busStopMarkers = {}; // Clear the busStopMarkers object
 
-                    if (data.features && data.features.length > 0) { // Check if data is valid
-                        data.features.forEach(stop => {
-                            var coords = stop.geometry.coordinates;
-                            const district = stop.properties.district; // Assuming each stop has a district property
-                            const municipality = stop.properties.municipality;
-                            const stopId = stop.properties.id; // Get the stop ID
+                data.forEach(stop => {
+                    const stopId = stop.id;
+                    const lat = stop.lat;
+                    const lon = stop.lon;
+                    const district = stop.district_id;
+                    const municipality = stop.municipality_id;
 
-                            // Create a new circle marker for bus stops
-                            const newMarker = L.circleMarker([coords[1], coords[0]], {
-                                radius: 5, // Size of the circle
-                                fillColor: 'red', // Fill color
-                                color: 'red', // Border color
-                                weight: 1, // Border weight
-                                opacity: 1, // Border opacity
-                                fillOpacity: 1 // Fill opacity
-                            });
+                    // Create a new circle marker for bus stops
+                    const newMarker = L.circleMarker([lat, lon], {
+                        radius: 5,
+                        fillColor: 'red',
+                        color: 'red', 
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 1
+                    });
 
-                            // Set the properties on the marker
-                            newMarker.district = district;
-                            newMarker.municipality = municipality;
-                            newMarker.stopId = stopId; // Store the stop ID
+                    // Set the properties on the marker
+                    newMarker.district = district;
+                    newMarker.municipality = municipality;
+                    newMarker.stopId = stopId;
 
-                            // Add the marker to the map
-                            newMarker.addTo(map);
-                            busStopMarkers[stopId] = newMarker; // Store the new marker using stop ID as key
+                    // Add the marker to the map
+                    newMarker.addTo(map);
+                    busStopMarkers[stopId] = newMarker;
 
-                            // Create a popup with bus stop information
-                            var popupContent = `
-                                <strong>Stop Name:</strong> ${stop.properties.name || 'N/A'}<br>
-                                <strong>District:</strong> ${district || 'N/A'}<br>
-                                <strong>Municipality:</strong> ${municipality || 'N/A'}<br>
-                                <strong>Additional Info:</strong> ${stop.properties.routes || 'N/A'}
-                            `;
-                            newMarker.bindPopup(popupContent); // Bind the popup to the new marker
-                            //console.log("stop id" + stopId);
-                        });
-                    } else {
-                        //console.warn('No bus stops found or invalid API response.');
-                    }
-                })
-                .catch(error => console.error('API Error:', error));
+                    // Create a popup with bus stop information
+                    var popupContent = `
+                        <strong>Stop Name:</strong> ${stop.long_name || 'N/A'}<br>
+                        <strong>District:</strong> ${district || 'N/A'}<br>
+                        <strong>Municipality:</strong> ${municipality || 'N/A'}<br>
+                        <strong>Lines:</strong> ${stop.line_ids ? stop.line_ids.join(', ') : 'N/A'}<br>
+                        <strong>Status:</strong> ${stop.operational_status || 'N/A'}<br>
+                        <strong>Wheelchair Access:</strong> ${stop.wheelchair_boarding ? 'Yes' : 'No'}
+                    `;
+                    newMarker.bindPopup(popupContent);
+                });
+            })
+            .catch(error => console.error('API Error:', error));
         }
 
         function changeMapStyle(style) {
