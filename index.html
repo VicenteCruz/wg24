@@ -172,29 +172,29 @@
                 <label for="municipalitySelect">Select Municipality:</label>
                 <select id="municipalitySelect">
                     <option value="0">-- Select Municipality --</option>
-                    <option value="1101">Municipality 1101</option>
-                    <option value="1102">Municipality 1102</option>
-                    <option value="1105">Municipality 1105</option>
-                    <option value="1106">Municipality 1106</option>
-                    <option value="1107">Municipality 1107</option>
-                    <option value="1109">Municipality 1109</option>
-                    <option value="1110">Municipality 1110</option>
-                    <option value="1111">Municipality 1111</option>
-                    <option value="1112">Municipality 1112</option>
-                    <option value="1113">Municipality 1113</option>
-                    <option value="1114">Municipality 1114</option>
-                    <option value="1115">Municipality 1115</option>
-                    <option value="1116">Municipality 1116</option>
-                    <option value="1502">Municipality 1502</option>
-                    <option value="1503">Municipality 1503</option>
-                    <option value="1504">Municipality 1504</option>
-                    <option value="1506">Municipality 1506</option>
-                    <option value="1507">Municipality 1507</option>
-                    <option value="1508">Municipality 1508</option>
-                    <option value="1510">Municipality 1510</option>
-                    <option value="1511">Municipality 1511</option>
-                    <option value="1512">Municipality 1512</option>
-                    <option value="712">Municipality 712</option>
+                    <option value="1101">Alenquer</option>
+                    <option value="1102">Arruda dos Vinhos</option>
+                    <option value="1105">Cascais</option>
+                    <option value="1106">Lisboa</option>
+                    <option value="1107">Loures</option>
+                    <option value="1109">Mafra</option>
+                    <option value="1110">Oeiras</option>
+                    <option value="1111">Sintra</option>
+                    <option value="1112">Sobral de Monte Agraço</option>
+                    <option value="1113">Torres Vedras</option>
+                    <option value="1114">Vila Franca de Xira</option>
+                    <option value="1115">Amadora</option>
+                    <option value="1116">Odivelas</option>
+                    <option value="1502">Alcochete</option>
+                    <option value="1503">Almada</option>
+                    <option value="1504">Barreiro</option>
+                    <option value="1506">Moita</option>
+                    <option value="1507">Montijo</option>
+                    <option value="1508">Palmela</option>
+                    <option value="1510">Seixal</option>
+                    <option value="1511">Sesimbra</option>
+                    <option value="1512">Setúbal</option>
+                    <option value="712">Vendas Novas</option>
                 </select>
             </li>
         </ul>
@@ -435,10 +435,11 @@
         });
         
         document.getElementById('districtSelect').addEventListener('change', () => {
-            const selectedDistrict = parseInt(document.getElementById('districtSelect').value, 10); // Parse selected district as an integer
+            const selectedDistrict = document.getElementById('districtSelect').value; // Parse selected district as an integer
             
             // Show or hide markers based on the selected district
             Object.values(busStopMarkers).forEach(marker => {
+                console.log("ola");
                 const matchesDistrict = selectedDistrict === 0 || marker.district === selectedDistrict; // Check district match
                 
                 if (matchesDistrict) {
@@ -454,7 +455,7 @@
         });
         
         document.getElementById('municipalitySelect').addEventListener('change', () => {
-            const selectedMunicipality = parseInt(document.getElementById('municipalitySelect').value, 10); // Parse selected district as an integer
+            const selectedMunicipality = document.getElementById('municipalitySelect').value; // Parse selected district as an integer
             
             // Show or hide markers based on the selected Municipality
             Object.values(busStopMarkers).forEach(marker => {
