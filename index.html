@@ -533,32 +533,57 @@
             .then(response => response.json())
             .then(data => {
                 const stopIds = data[0].path.map(p => p.stop_id);
-                selectBusStopId(stopIds);
-                
+
                 const shape_id = data[0].shape_id;
                 fetch(`https://api.cmet.pt/shapes/${shape_id}`)
                 .then(response => response.json())
                 .then(data => {
                     const geojson = data.geojson;
                     
-                    // Remove the existing itinerary layer if it exists
                     if (currentItineraryLayer) {
                         map.removeLayer(currentItineraryLayer);
                     }
                     
-                    // Add the new itinerary layer
                     currentItineraryLayer = L.geoJSON(geojson, {
                         style: {
-                            color: '#ff0000', // line color
-                            weight: 2, // line width
-                            opacity: 1 // line opacity
+                            color: '#ff0000',
+                            weight: 2,
+                            opacity: 1
                         }
                     }).addTo(map);
+                
+                // Calculate color for each stop based on its position in the sequence
+                stopIds.forEach((stopId, index) => {
+                    const marker = busStopMarkers[stopId];
+                    if (marker) {
+                        // Calculate color interpolation (dark red to light red)
+                        const progress = index / (stopIds.length - 1); // 0 to 1
+                        const r = Math.round(255 * (1-progress)); // 139 to 255
+                        const g = Math.round(255 *  progress);     // 0 to 99
+                        const b = Math.round(0 );     // 0 to 71
+                        
+                        marker.setStyle({
+                            fillColor: `rgb(${r},${g},${b})`,
+                            color: `rgb(${r},${g},${b})`,
+                            radius: 5,
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 1
+                        });
+                        marker.addTo(map);
+                    }
+                });
+
+                // Hide bus stops that aren't part of the itinerary
+                Object.values(busStopMarkers).forEach(marker => {
+                    if (!stopIds.includes(marker.stopId)) {
+                        map.removeLayer(marker);
+                    }
+                });
                     
-                    // Show the reset button
                     document.getElementById('resetButton').style.display = 'block';
-                })
-            })
+                });
+            });
         }
         
         function resetMap() {
@@ -584,6 +609,14 @@
             });
             
             Object.values(busStopMarkers).forEach(marker => {
+                marker.setStyle({
+                    radius: 5,
+                        fillColor: 'red',
+                        color: 'red', 
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 1
+                        });
                 if (showAllBusStops) {
                     marker.addTo(map);
                 } else {
@@ -744,8 +777,6 @@
                                 const commonPatterns = firstPatternsArray.filter(pattern => secondPatternsArray.includes(pattern));
                                 if (commonPatterns.length > 0) {
                                     patternInCommun.push(...commonPatterns);
-                                    console.log(firstClickMarkers);
-
                                 }
                             });
                         });
