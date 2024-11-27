@@ -323,6 +323,8 @@
                     const lon = stop.lon;
                     const district = stop.district_id;
                     const municipality = stop.municipality_id;
+                    const patterns = stop.pattern_ids;
+
 
                     // Create a new circle marker for bus stops
                     const newMarker = L.circleMarker([lat, lon], {
@@ -338,6 +340,8 @@
                     newMarker.district = district;
                     newMarker.municipality = municipality;
                     newMarker.stopId = stopId;
+                    newMarker.patterns = patterns;
+
 
                     // Add the marker to the map
                     newMarker.addTo(map);
@@ -715,19 +719,19 @@
             map.on('click', (event) => {
                 if (isSelectingPoints && selectedPoints.length < 2) {
                     selectedPoints.push(event.latlng); // Store the clicked point's coordinates
-                    console.log("ok1");
 
                     Object.values(busStopMarkers).forEach(marker => {
                         const distance = calculateDistance(event.latlng.lat, event.latlng.lng, marker.getLatLng().lat, marker.getLatLng().lng);
-                        if (distance <= 200) {
+                        if (distance <= 500) {
                             // Instead of adding to the map, save the marker to a separate vector
                             if (selectedPoints.length === 1) {
-                                firstClickMarkers.push(marker);
+                                firstClickMarkers.push(marker);                    
                             } else if (selectedPoints.length === 2) {
                                 secondClickMarkers.push(marker);
                             }
                         }
                     });
+
 
                     if (selectedPoints.length === 2) {
                         isSelectingPoints = false; // Stop selecting after two points
@@ -740,14 +744,18 @@
                                 const commonPatterns = firstPatternsArray.filter(pattern => secondPatternsArray.includes(pattern));
                                 if (commonPatterns.length > 0) {
                                     patternInCommun.push(...commonPatterns);
+                                    console.log(firstClickMarkers);
+
                                 }
                             });
                         });
-                        
                         if(patternInCommun.length > 0){
                             const formattedPattern = patternInCommun[0].toString().replace(/(\d{4})(\d{1})(\d{1})/, "$1_$2_$3");
-                            console.log(formattedPattern);
+                            const formattedLine = patternInCommun[0].toString().substring(0, 4);
+
+                            console.log(formattedLine);
                             showItinerary(formattedPattern);
+                            selectBusLineId(formattedLine);
                         }
                     }
                 }
