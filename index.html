@@ -287,6 +287,12 @@
                                     this.openPopup(); // Open the popup on click
                                     selectBusLineId(vehicle.line_id);
                                     showItinerary(vehicle.pattern_id);
+                                    setTimeout(() => {
+                                        fullExtent();
+                                    }, 300);
+                                    setTimeout(() => {
+                                        fullExtent();
+                                    }, 1000);
                                 });
 
 
@@ -436,6 +442,8 @@
                     map.removeLayer(marker); // Remove marker from the map
                 });
             }
+
+
         });
         
         document.getElementById('districtSelect').addEventListener('change', () => {
@@ -478,6 +486,10 @@
         });
         
         document.getElementById('fullExtentButton').addEventListener('click', () => {
+            fullExtent();
+        });
+
+        function fullExtent(){
             const visibleMarkers = []; // Array to hold currently visible markers
             
             // Check bus stop markers
@@ -501,7 +513,7 @@
             } else {
                 alert("No visible points to focus on."); // Alert if no markers are visible
             }
-        });
+        }
         
         function selectBusLineId(lineId) {
             Object.values(vehicleMarkers).forEach(marker => {
@@ -526,6 +538,7 @@
                     map.removeLayer(marker);
                 }
             });
+
         }
         
         function showItinerary(pattern) {
